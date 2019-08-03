@@ -1,0 +1,11 @@
+URxvt*scrollBar:         false
+URxvt*scrollBar_right:   false
+
+URxvt*transparent:       false
+
+URxvt.font: xft:Terminus:pixelsize=14
+URxvt.letterSpace: 0
+
+*antialias:  true
+*autohint:   true
+
