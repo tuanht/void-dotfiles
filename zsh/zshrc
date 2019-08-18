@@ -1,0 +1,122 @@
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/tuanht/.oh-my-zsh
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="robbyrussell"
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git vi-mode)
+
+# User configuration
+
+# export PATH="/Users/tuanht/.rbenv/shims:/Users/tuanht/.nvm/versions/node/v4.0.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+# export MANPATH="/usr/local/man:$MANPATH"
+
+source $ZSH/oh-my-zsh.sh
+
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias zshconfig="vim ~/.zshrc"
+alias ls='ls -Gh'
+
+export LC_ALL=C
+export PATH="/usr/local/sbin:$PATH"
+export ICLOUD_PATH="$HOME/Library/Mobile Documents/com~apple~CloudDocs/"
+
+alias evs-tmux=''
+alias evs-mysql="docker exec -it evs_mariadb mysql -ueverystay -pabc123 everystay"
+alias evs-owner="mysql -h 127.0.0.1 -ueverystay -pabc123 everystay -e 'select o.id as oid,c.id as cid,o.email,o.code,c.channel from owner o left join owner_channel_manager c on o.id = c.owner_id;'"
+
+alias evs-console="php ~/everystay/base/bin/console"
+alias debug-evs-console="php --php-ini ~/everystay/ext-xdebug.ini ~/everystay/base/bin/console"
+alias evs-phpcs="/usr/bin/php ~/everystay/base/vendor/bin/phpcs -p --standard=PSR2 --extensions=php ~/everystay/base/src/"
+
+alias top-cpu="top -o cpu -s 5 -n 15"
+alias top-mem="top -o mem -s 10"
+
+alias ssh-dev="ssh -i ~/Documents/Everystay/everystay.pem ubuntu@everystay.dev"
+alias ssh-uat="ssh -i ~/Documents/Everystay/everystay.pem ubuntu@everystay.uat"
+alias ssh-prod="ssh -i ~/Documents/Everystay/everystay.pem ubuntu@everystay.prod"
+alias ssh-evs="ssh -i ~/Documents/Everystay/everystay.pem"
+alias scp="scp -i ~/Documents/Everystay/everystay.pem"
+
+alias php-enable-debug="ln -s /Users/tuanht/everystay/ext-xdebug.ini /usr/local/etc/php/7.2/conf.d/ && brew services restart php72"
+alias php-disable-debug="rm /usr/local/etc/php/7.2/conf.d/ext-xdebug.ini && brew services restart php72"
+
+alias docker-compose="docker-compose --project-directory ~/everystay/evs_vm --file ~/everystay/evs_vm/docker-compose.yml"
+alias docker-root="docker exec -it evs_phpfpm /bin/sh"
+alias docker-www="docker exec -it --user www-data evs_phpfpm /bin/sh"
+
+export PATH="/usr/local/opt/elasticsearch@2.4/bin:$PATH"
+
+export NVM_DIR="/Users/tuanht/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export HOMEBREW_GITHUB_API_TOKEN=c4d297fe363ba8ceeff99bd9cd7ecee4e6f94e4c
