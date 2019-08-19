@@ -16,6 +16,7 @@ git clone git@github.com:tuanht/dotfiles .dotfiles
 ln -sf ~/.dotfiles/zsh/zshrc ~/.zshrc
 ln -sf ~/.dotfiles/nvim/init.vim ~/.config/nvim/init.vim
 ln -sf ~/.dotfiles/gitconfig ~/.gitconfig
+ln -sf ~/.dotfiles/tmux.conf ~/.tmux.conf
 ```
 
 ### Void Linux
