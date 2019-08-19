@@ -13,9 +13,9 @@ git clone git@github.com:tuanht/dotfiles .dotfiles
 ### macOS
 
 ```shell
-ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
-ln -s ~/.dotfiles/nvim/init.vim ~/.config/nvim/init.vim
-ln -s ~/.dotfiles/gitconfig ~/.gitconfig
+ln -sf ~/.dotfiles/zsh/zshrc ~/.zshrc
+ln -sf ~/.dotfiles/nvim/init.vim ~/.config/nvim/init.vim
+ln -sf ~/.dotfiles/gitconfig ~/.gitconfig
 ```
 
 ### Void Linux
