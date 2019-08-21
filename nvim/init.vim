@@ -7,3 +7,6 @@ set termguicolors
 
 set number
 let g:gitgutter_enabled = 1
+
+"enable 256 colors in vim
+set t_Co=256
