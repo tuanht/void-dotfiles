@@ -14,6 +14,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'chr4/nginx.vim'
 
+Plug 'tpope/vim-surround'
+
 " Initialize plugin system
 call plug#end()
 
