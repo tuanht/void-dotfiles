@@ -21,9 +21,9 @@ getcolors
 
 sxhkd &
 polybar top --reload &
-fcitx &
+compton -b &
 
-WALLPAPER=$(shuf -n1 -e ~/wallpapers/*)
+WALLPAPER=$(shuf -n1 -e ~/.dotfiles/wallpapers/*)
 feh --bg-fill "$WALLPAPER" &
 
 bspc monitor -d main web comm dev code term play
