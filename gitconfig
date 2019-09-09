@@ -3,7 +3,7 @@
 	email = htux@icloud.com
 [core]
 	excludesfile = /Users/tuanht/.gitignore_global
-	editor = nvim
+	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
