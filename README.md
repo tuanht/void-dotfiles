@@ -21,3 +21,15 @@ ln -sf ~/.dotfiles/tmux.conf ~/.tmux.conf
 
 ### Void Linux
 
+## Tmux Plugin Manager
+
+Clone TPM:
+
+```shell
+$ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+Installing plugins: Press `prefix` + I (capital i, as in Install) to fetch the plugin.
+Updating plugins: `prefix` + U
+Removing plugins: `prefix` + alt + u
+
