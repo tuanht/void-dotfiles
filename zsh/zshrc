@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/tuanht/.oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -88,35 +88,16 @@ alias ls='ls -Gh'
 
 export LC_ALL=C
 export PATH="/usr/local/sbin:$PATH"
-export ICLOUD_PATH="$HOME/Library/Mobile Documents/com~apple~CloudDocs/"
 
-alias evs-tmux=''
-alias evs-mysql="docker exec -it evs_mariadb mysql -ueverystay -pabc123 everystay"
-alias evs-owner="mysql -h 127.0.0.1 -ueverystay -pabc123 everystay -e 'select o.id as oid,c.id as cid,o.email,o.code,c.channel from owner o left join owner_channel_manager c on o.id = c.owner_id;'"
+if [ "$(uname)" = "Darwin"   ]; then
+    source $HOME/.dotfiles/zsh/macrc
+fi
 
-alias evs-console="php ~/everystay/base/bin/console"
-alias debug-evs-console="php --php-ini ~/everystay/ext-xdebug.ini ~/everystay/base/bin/console"
-alias evs-phpcs="/usr/bin/php ~/everystay/base/vendor/bin/phpcs -p --standard=PSR2 --extensions=php ~/everystay/base/src/"
+[ -d "$HOME/everystay" ] && source $HOME/.dotfiles/zsh/evsrc
 
 alias top-cpu="top -o cpu -s 5 -n 15"
 alias top-mem="top -o mem -s 10"
 
-alias ssh-dev="ssh -i ~/Documents/Everystay/everystay.pem ubuntu@everystay.dev"
-alias ssh-uat="ssh -i ~/Documents/Everystay/everystay.pem ubuntu@everystay.uat"
-alias ssh-prod="ssh -i ~/Documents/Everystay/everystay.pem ubuntu@everystay.prod"
-alias ssh-evs="ssh -i ~/Documents/Everystay/everystay.pem"
-alias scp="scp -i ~/Documents/Everystay/everystay.pem"
-
-alias php-enable-debug="ln -s /Users/tuanht/everystay/ext-xdebug.ini /usr/local/etc/php/7.2/conf.d/ && brew services restart php72"
-alias php-disable-debug="rm /usr/local/etc/php/7.2/conf.d/ext-xdebug.ini && brew services restart php72"
-
-alias docker-compose="docker-compose --project-directory ~/everystay/evs_vm --file ~/everystay/evs_vm/docker-compose.yml"
-alias docker-root="docker exec -it evs_phpfpm /bin/sh"
-alias docker-www="docker exec -it --user www-data evs_phpfpm /bin/sh"
-
-export PATH="/usr/local/opt/elasticsearch@2.4/bin:$PATH"
-
 export NVM_DIR="/Users/tuanht/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export HOMEBREW_GITHUB_API_TOKEN=c4d297fe363ba8ceeff99bd9cd7ecee4e6f94e4c
