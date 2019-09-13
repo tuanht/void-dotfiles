@@ -89,10 +89,12 @@ export LC_ALL=C
 export PATH="/usr/local/sbin:$PATH"
 
 if [ "$(uname)" = "Darwin"   ]; then
-    source $HOME/.dotfiles/zsh/macrc
+    source $HOME/.dotfiles/zsh/mac.rc
+elif [ "$(uname)" = "Linux" ]; then
+    source $HOME/.dotfiles/zsh/linux.rc
 fi
 
-[ -d "$HOME/everystay" ] && source $HOME/.dotfiles/zsh/evsrc
+[ -d "$HOME/everystay" ] && source $HOME/.dotfiles/zsh/evs.rc
 
 alias top-cpu="top -o cpu -s 5 -n 15"
 alias top-mem="top -o mem -s 10"
