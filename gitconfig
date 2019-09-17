@@ -2,7 +2,7 @@
 	name = Tuan Ha
 	email = htux@icloud.com
 [core]
-	excludesfile = /Users/tuanht/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -17,8 +17,15 @@
 	process = git-lfs filter-process
 [gpg]
 [commit]
-	template = /Users/tuanht/.stCommitMsg
+	template = ~/.stCommitMsg
 [tag]
 [alias]
 	s = status -s
 	amend = commit --amend --reuse-message=HEAD
+    cdiff = diff --cached
+    sdiff = diff --staged
+    hunk = add --patch
+
+[url "git@github.com"]
+    insteadOf = gh:
+
