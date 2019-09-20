@@ -6,13 +6,10 @@ let g:gitgutter_enabled = 1
 set modeline
 set modelines=5
 
-" -- INSERT -- is unnecessary anymore because the mode information is displayed in the statusline.
-set noshowmode
-
 let g:lightline = {
       \ 'colorscheme': 'seoul256',
       \ 'active': {
-      \   'left': [ ['mode', 'paste'],
+      \   'left': [ ['paste'],
       \             ['fugitive', 'readonly', 'filename', 'modified'] ],
       \   'right': [ [ 'lineinfo' ], ['percent'],
       \              [ 'fileformat', 'fileencoding', 'filetype' ]
