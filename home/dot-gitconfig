@@ -1,3 +1,5 @@
+; vim: set ft=gitconfig:
+
 [user]
 	name = Tuan Ha
 	email = htux@icloud.com
