@@ -1,5 +1,5 @@
-source ~/.dotfiles/nvim/plugins.vim
-source ~/.dotfiles/nvim/basic.vim
+source ~/.config/nvim/plugins.vim
+source ~/.config/nvim/basic.vim
 
 colorscheme cobalt2
 set background=dark
