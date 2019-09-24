@@ -1,3 +1,5 @@
+OS_TYPE="$(uname)"
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -5,7 +7,14 @@ export ZSH="$HOME/.oh-my-zsh"
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+case $OS_TYPE in
+    "Linux")
+        ZSH_THEME="geoffgarside"
+        ;;
+    *)
+        ZSH_THEME="robbyrussell"
+        ;;
+esac
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -84,17 +93,21 @@ export LANG=en_US.UTF-8
 
 alias zshconfig="vim ~/.zshrc"
 alias ls='ls -Gh'
+alias ll='ls -Glah'
 
 export LC_ALL=C
 export PATH="/usr/local/sbin:$PATH"
 
-if [ "$(uname)" = "Darwin"   ]; then
-    source $HOME/.dotfiles/zsh/mac
-elif [ "$(uname)" = "Linux" ]; then
-    source $HOME/.dotfiles/zsh/linux
-fi
+case $OS_TYPE in
+    "Darwin")
+        source $HOME/.zsh_mac
+        ;;
+    "Linux")
+        source $HOME/.zsh_linux
+        ;;
+esac
 
-[ -d "$HOME/everystay" ] && source $HOME/.dotfiles/zsh/evs
+[ -d "$HOME/everystay" ] && source $HOME/.zsh_evs
 
 alias top-cpu="top -o cpu -s 5 -n 15"
 alias top-mem="top -o mem -s 10"

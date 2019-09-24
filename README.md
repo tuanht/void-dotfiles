@@ -33,3 +33,9 @@ Installing plugins: Press `prefix` + I (capital i, as in Install) to fetch the p
 Updating plugins: `prefix` + U
 Removing plugins: `prefix` + alt + u
 
+# stow
+
+```shell
+stow zsh --dotfiles
+```
+
