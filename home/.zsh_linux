@@ -9,3 +9,8 @@ alias emerge-upgrade='emerge --update --deep --with-bdeps=y @world'
 
 # upgrade applications that are explicitly installed (the applications listed in /var/lib/portage/world)
 alias emerge-upgrade-app='emerge --update --ask @world'
+
+if [[ -z $DISPLAY  ]] && [[ $(tty) = /dev/tty1  ]]; then
+    startx
+fi
+
