@@ -1,5 +1,4 @@
 --dir=./
---target=~
---dotfiles
+--target="$HOME"
 --no-folding
 -v
