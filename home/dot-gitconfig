@@ -27,6 +27,7 @@
     cdiff = diff --cached
     sdiff = diff --staged
     hunk = add --patch
+    pushr = push --set-upstream origin HEAD
 
 [url "git@github.com"]
     insteadOf = gh:

@@ -1,2 +1,11 @@
 # vim: set ft=zsh:
 
+alias emerge-search='emerge --search'
+alias emerge-install='emerge --ask'
+alias emerge-update='emerge --sync'
+alias emerge-remove='emerge --unmerge'
+
+alias emerge-upgrade='emerge --update --deep --with-bdeps=y @world'
+
+# upgrade applications that are explicitly installed (the applications listed in /var/lib/portage/world)
+alias emerge-upgrade-app='emerge --update --ask @world'
