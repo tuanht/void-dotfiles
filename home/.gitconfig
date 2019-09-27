@@ -18,8 +18,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 [gpg]
-[commit]
-	template = ~/.stCommitMsg
 [tag]
 [alias]
 	s = status -s

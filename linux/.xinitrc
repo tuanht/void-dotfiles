@@ -36,9 +36,5 @@ fi
 
 # Default session
 session=${1:-bspwm}
-
-case $session in
-    "dwm"   ) exec dwm;;
-    *       ) exec $1;;
-esac
+exec $session
 
