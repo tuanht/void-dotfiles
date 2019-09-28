@@ -1,5 +1,10 @@
 # vim: set ft=zsh:
 
+if [[ -z $DISPLAY  ]] && [[ $(tty) = /dev/tty1  ]]; then
+    # exec causes logged out whenever X11 session terminates
+    exec startx
+fi
+
 alias emerge-search='emerge --search'
 alias emerge-install='emerge --ask'
 alias emerge-update='emerge --sync'
@@ -9,8 +14,4 @@ alias emerge-upgrade='emerge --update --deep --with-bdeps=y @world'
 
 # upgrade applications that are explicitly installed (the applications listed in /var/lib/portage/world)
 alias emerge-upgrade-app='emerge --update --ask @world'
-
-if [[ -z $DISPLAY  ]] && [[ $(tty) = /dev/tty1  ]]; then
-    startx
-fi
 

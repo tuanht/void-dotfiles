@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	urxvt
+    st
 
 super + F1
         firefox-bin
@@ -15,6 +15,10 @@ super + F2
 # program launcher
 super + @space
 	dmenu_run -b
+
+# lock screen
+super + q
+    slock
 
 # make sxhkd reload its configuration files:
 super + Escape
