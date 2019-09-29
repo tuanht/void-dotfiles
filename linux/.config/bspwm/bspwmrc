@@ -14,17 +14,14 @@ getcolors () {
 	WHITE=$(xrdb -query | grep 'color7:'| awk '{print $NF}')
 }
 xrdb ~/.Xresources
-COLOR=$(shuf -n1 -e ~/.colors/*)
+export COLOR=$(shuf -n1 -e ~/.colors/*.enable)
 SHORTCOLOR=$(echo $COLOR | sed "s@.*/@@")
 xrdb -merge $COLOR
 getcolors
 
 sxhkd &
-polybar top --reload &
+~/.dotfiles/linux/.config/polybar/launch.sh &
 compton -b &
-
-WALLPAPER=$(shuf -n1 -e ~/.dotfiles/wallpapers/*)
-feh --bg-fill "$WALLPAPER" &
 
 bspc monitor -d main web comm dev code term play
 
