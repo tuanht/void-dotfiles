@@ -15,9 +15,9 @@ set modelines=5
 " set noshowmode
 
 let g:lightline = {
-      \ 'colorscheme': 'seoul256',
+      \ 'colorscheme': 'wombat',
       \ 'active': {
-      \   'left': [ ['paste'],
+      \   'left': [ ['filename', 'paste'],
       \             ['cwd', 'readonly', 'modified'],
       \   ],
       \   'right': [ [ 'lineinfo' ], ['percent'],
