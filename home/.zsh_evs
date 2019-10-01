@@ -1,6 +1,6 @@
 # vim: set ft=zsh:
 alias evs-mysql="mysql -h evs_mariadb -ueverystay -pabc123 everystay"
-alias evs-owner="mysql -h evs_mariadb -ueverystay -pabc123 everystay -e 'select o.id as oid,c.id as cid,o.email,o.code,c.channel from owner o left join owner_channel_manager c on o.id = c.owner_id;'"
+alias evs-owner="mysql -h evs_mariadb -ueverystay -pabc123 everystay -e 'select o.id as oid,c.id as cid,o.email,o.code,c.channel,c.active,c.house_status from owner o left join owner_channel_manager c on o.id = c.owner_id;'"
 
 PEM="~/Documents/Everystay/local\ machine\ config/everystay.pem"
 alias ssh-dev="ssh -i $PEM ubuntu@everystay.dev"

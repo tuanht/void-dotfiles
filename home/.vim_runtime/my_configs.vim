@@ -8,6 +8,11 @@ let g:gitgutter_enabled = 1
 " Disable comfortable motion plugin
 let g:loaded_comfortable_motion = 0
 
+" Change theme
+" colorscheme cobalt2
+" set background=dark
+" set termguicolors
+
 " Enable mode line
 set modeline
 set modelines=5
@@ -18,7 +23,7 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ ['filename', 'paste'],
-      \             ['cwd', 'readonly', 'modified'],
+      \             ['readonly', 'modified', 'cwd'],
       \   ],
       \   'right': [ [ 'lineinfo' ], ['percent'],
       \              [ 'fileformat', 'fileencoding', 'filetype' ]
