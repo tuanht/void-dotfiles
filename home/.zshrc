@@ -11,10 +11,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # time that oh-my-zsh is loaded.
 case $OS_TYPE in
     "Linux")
-        ZSH_THEME="geoffgarside"
+        ZSH_THEME="gentoo"
         ;;
     *)
-        ZSH_THEME="robbyrussell"
+        ZSH_THEME="geoffgarside"
         ;;
 esac
 
