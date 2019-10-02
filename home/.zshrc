@@ -14,7 +14,7 @@ case $OS_TYPE in
         ZSH_THEME="gentoo"
         ;;
     *)
-        ZSH_THEME="geoffgarside"
+        ZSH_THEME="geoffgarside_forked"
         ;;
 esac
 
