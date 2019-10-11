@@ -2,6 +2,6 @@
 export ICLOUD_PATH="$HOME/Library/Mobile Documents/com~apple~CloudDocs/"
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
-export HOMEBREW_GITHUB_API_TOKEN=c4d297fe363ba8ceeff99bd9cd7ecee4e6f94e4c
+export HOMEBREW_GITHUB_API_TOKEN=445e37d489146eba5c59e2baa0c1d55e3ed07ee3
 
 export PATH="/usr/local/opt/php@7.2/bin:/usr/local/opt/php@7.2/sbin:$PATH"
