@@ -20,7 +20,7 @@ set modelines=5
 " set noshowmode
 
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'seoul256',
       \ 'active': {
       \   'left': [ ['filename', 'paste'],
       \             ['readonly', 'modified', 'cwd'],

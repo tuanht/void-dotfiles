@@ -24,6 +24,7 @@
 	amend = commit --amend --reuse-message=HEAD
     cdiff = diff --cached
     sdiff = diff --staged
+    udiff = diff HEAD ; diff unstaged changed
     hunk = add --patch
     pushr = push --set-upstream origin HEAD
 
