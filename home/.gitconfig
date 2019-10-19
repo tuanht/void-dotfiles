@@ -21,6 +21,7 @@
 [tag]
 [alias]
 	s = status -s
+    i = add -i
 	amend = commit --amend --reuse-message=HEAD
     cdiff = diff --cached
     sdiff = diff --staged
