@@ -15,7 +15,7 @@ alias scp="scp -i $PEM"
 alias php-enable-debug="ln -s /Users/tuanht/everystay/ext-xdebug.ini /usr/local/etc/php/7.2/conf.d/ && brew services restart php72"
 alias php-disable-debug="rm /usr/local/etc/php/7.2/conf.d/ext-xdebug.ini && brew services restart php72"
 
-alias docker-compose="docker-compose --project-directory ~/everystay/evs_vm --file ~/everystay/evs_vm/docker-compose.yml"
+alias docker-compose-evs="docker-compose --project-directory ~/everystay/evs_vm --file ~/everystay/evs_vm/docker-compose.yml"
 alias docker-root="docker exec -it evs_phpfpm /bin/sh"
 alias docker-www="docker exec -it --user www-data evs_phpfpm /bin/sh"
 

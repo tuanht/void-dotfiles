@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-/usr/local/opt/mysql-client/bin/mysql -h evs_mariadb -ueverystay -pabc123 everystay < ./evs_mariadb_`date +%Y%m%d`.sql && \
+/usr/local/opt/mysql-client/bin/mysql -h evs_mariadb -ueverystay -pabc123 everystay < ./evs_mariadb.sql && \
     curl -XPUT http://evs_elasticsearch:9200/currency && \
     curl -XPUT http://evs_elasticsearch:9200/translation && \
     elasticdump --output=http://evs_elasticsearch:9200/currency --input=currency_mapping.json --type=mapping && \
