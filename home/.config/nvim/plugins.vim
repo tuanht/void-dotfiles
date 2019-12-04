@@ -15,6 +15,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'chr4/nginx.vim'
 
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 
 " Initialize plugin system
 call plug#end()

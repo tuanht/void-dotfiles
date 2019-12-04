@@ -8,3 +8,6 @@ source ~/.config/nvim/statusline.vim
 
 set number
 
+set splitbelow
+set splitright
+
