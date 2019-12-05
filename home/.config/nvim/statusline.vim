@@ -11,7 +11,7 @@ set statusline+=%*
 set statusline+=\ \ CWD:\ %{getcwd()}%h " Current working directory
 
 set statusline+=%= "Align right
-set statusline+=\ \ \ %{&ff}\ \ %Y "File format & type
+set statusline+=\ \ \ %{&ff}\ \ %{&fenc==''?&enc:&fenc}\ \ %Y "File format & type
 
 set statusline+=\ \ %#Folded#
 set statusline+=\ \ %p%%\ \  "Percentage through file
