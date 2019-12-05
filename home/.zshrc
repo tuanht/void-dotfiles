@@ -94,6 +94,8 @@ esac
 
 [ -d "$HOME/everystay" ] && source $HOME/.zsh_evs
 
+[ -s "$HOME/.zsh_local" ] && source $HOME/.zsh_local
+
 alias top-cpu="top -o cpu -s 5 -n 15"
 alias top-mem="top -o mem -s 10"
 
