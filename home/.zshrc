@@ -77,8 +77,6 @@ export LANG=en_US.UTF-8
 # For a full list of active aliases, run `alias`.
 
 alias zshconfig="vim ~/.zshrc"
-alias ls='ls -Gh'
-alias ll='ls -Glah'
 
 export LC_ALL=C
 export PATH="/usr/local/sbin:$PATH"

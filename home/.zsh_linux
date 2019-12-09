@@ -1,4 +1,6 @@
 # vim: set ft=zsh:
+alias ls='ls --color=auto -h'
+alias ll='ls --color=auto -lah'
 
 if [[ -z $DISPLAY  ]] && [[ $(tty) = /dev/tty1  ]]; then
     # exec causes logged out whenever X11 session terminates
