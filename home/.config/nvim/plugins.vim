@@ -14,8 +14,12 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'chr4/nginx.vim'
 
+" Coding
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+" This plugin enables the Vim conceal feature
+" For example, users utilizing the built in json.vim syntax file will no longer see quotation marks in their JSON files.
+Plug 'Yggdroot/indentLine'
 
 " Initialize plugin system
 call plug#end()
