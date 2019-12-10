@@ -25,3 +25,8 @@ let g:netrw_browse_split = 4
 let g:netrw_winsize = 25
 let g:netrw_altv = 1
 
+map <leader>ve :Vexplore<cr>
+
+" === Ctrlp section ===
+let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee|vendor\|var/'
+
