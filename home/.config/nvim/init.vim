@@ -2,10 +2,7 @@ source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/basic.vim
 source ~/.config/nvim/statusline.vim
 
-" TODO color incorrect with tmux
 colorscheme cobalt2
-set background=dark
-set termguicolors
 
 set number
 
