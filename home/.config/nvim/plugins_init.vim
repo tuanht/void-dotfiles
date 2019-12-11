@@ -18,3 +18,19 @@ let g:gutentags_add_default_project_roots = 0
 let g:gutentags_project_root = ['.git']
 let g:gutentags_trace = 1
 
+" Enable ncm2
+autocmd BufEnter * call ncm2#enable_for_buffer()
+" IMPORTANT: :help Ncm2PopupOpen for more information
+set completeopt=noinsert,menuone,noselect
+
+" Snippet
+" Press enter key to trigger snippet expansion
+" The parameters are the same as `:help feedkeys()`
+inoremap <silent> <expr> <CR> ncm2_ultisnips#expand_or("\<CR>", 'n')
+
+" c-j c-k for moving in snippet
+" let g:UltiSnipsExpandTrigger		= "<Plug>(ultisnips_expand)"
+let g:UltiSnipsJumpForwardTrigger	= "<c-l>"
+let g:UltiSnipsJumpBackwardTrigger	= "<c-h>"
+let g:UltiSnipsRemoveSelectModeMappings = 0
+
