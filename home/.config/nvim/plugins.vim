@@ -20,6 +20,9 @@ Plug 'tpope/vim-commentary'
 " This plugin enables the Vim conceal feature
 " For example, users utilizing the built in json.vim syntax file will no longer see quotation marks in their JSON files.
 Plug 'Yggdroot/indentLine'
+Plug 'ludovicchabant/vim-gutentags'
+" Need install universal-ctags or ctags (brew)
+Plug 'majutsushi/tagbar'
 
 " Initialize plugin system
 call plug#end()
