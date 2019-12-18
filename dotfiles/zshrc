@@ -76,19 +76,13 @@ export LANG=en_US.UTF-8
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-alias zshconfig="vim ~/.zshrc"
+alias zshconfig="nvim ~/.zshrc"
+alias dotdrop="~/.dotfiles/dotdrop.sh --cfg=~/.dotfiles/config.yaml"
 
 export LC_ALL=C
 export PATH="/usr/local/sbin:$PATH"
 
-case $OS_TYPE in
-    "Darwin")
-        source $HOME/.zsh_mac
-        ;;
-    "Linux")
-        source $HOME/.zsh_linux
-        ;;
-esac
+source $HOME/.zsh_os
 
 [ -d "$HOME/everystay" ] && source $HOME/.zsh_evs
 
