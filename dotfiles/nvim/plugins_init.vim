@@ -16,7 +16,8 @@ let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee|vendor
 " gutentags
 let g:gutentags_add_default_project_roots = 0
 let g:gutentags_project_root = ['.git']
-let g:gutentags_trace = 1
+let g:gutentags_exclude_project_root = ['/usr/local', '/Users/tuanht']
+let g:gutentags_trace = 0
 
 " Enable ncm2
 autocmd BufEnter * call ncm2#enable_for_buffer()
