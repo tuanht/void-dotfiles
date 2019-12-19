@@ -12,14 +12,12 @@ git submodule update --init
 
 ## Install
 
-Ensure python3 are installed.
-
 For MacOS users, make sure to install `realpath` through homebrew (part of coreutils).
 
 ```shell
 pip3 install -r dotdrop/requirements.txt --user
 ./dotdrop/bootstrap.sh
-dotdrop install --profile=<mac|linux|xorg|vim-only>
+./dotdrop.sh install --profile=<mac|linux|xorg|vim-only>
 ```
 
 ## Tmux Plugin Manager quick reference:
