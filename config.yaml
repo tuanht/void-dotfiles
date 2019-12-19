@@ -1,0 +1,125 @@
+actions:
+    pre:
+        nvim-plug-install: test -e ~/.local/share/nvim/site/autoload/plug.vim || curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        oh-my-zsh: test -d ~/.oh-my-zsh || sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+        vim-runtime-install: test -d ~/.vim_runtime/vimrcs || git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime && sh ~/.vim_runtime/install_awesome_vimrc.sh
+        tmux-tmp-install: test -d ~/.tmux/plugins/tpm || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    post:
+        nvim-plug: nvim +PlugInstall +qa
+config:
+    backup: true
+    create: true
+    dotpath: dotfiles
+dotfiles:
+    d_nvim:
+        src: nvim
+        dst: ~/.config/nvim
+        link: link_children
+        actions:
+            - nvim-plug-install
+            - nvim-plug
+    f_zshrc:
+        src: zshrc
+        dst: ~/.zshrc
+        link: link
+        actions:
+            - oh-my-zsh
+    f_zsh_mac:
+        src: zsh_mac
+        dst: ~/.zsh_os
+        link: link
+    f_zsh_evs:
+        src: zsh_evs
+        dst: ~/.zsh_evs
+        link: link
+    f_zsh_linux:
+        src: zsh_linux
+        dst: ~/.zsh_os
+        link: link
+    d_ohmyzsh_themes:
+        src: oh-my-zsh/themes
+        dst: ~/.oh-my-zsh/themes
+        link: link_children
+    f_tmux:
+        src: tmux.conf
+        dst: ~/.tmux.conf
+        link: link
+        actions:
+            - tmux-tmp-install
+    f_gitconfig:
+        src: gitconfig
+        dst: ~/.gitconfig
+        link: link
+    d_vim_runtime:
+        src: vim_runtime
+        dst: ~/.vim_runtime
+        link: link_children
+        actions:
+            - vim-runtime-install
+    d_kitty:
+        src: kitty
+        dst: ~/.config/kitty
+        link: link_children
+    f_xresources:
+        src: xorg/Xresources
+        dst: ~/.Xresources
+        link: link
+    f_xinitrc:
+        src: xorg/xinitrc
+        dst: ~/.xinitrc
+        link: link
+    d_bspwm:
+        src: xorg/bspwm
+        dst: ~/.config/bspwm
+        link: link_children
+    d_polybar:
+        src: xorg/polybar
+        dst: ~/.config/polybar
+        link: link_children
+    d_sxhkd:
+        src: xorg/sxhkd
+        dst: ~/.config/sxhkd
+        link: link_children
+    d_gtk30:
+        src: xorg/gtk-3.0
+        dst: ~/.config/gtk-3.0
+        link: link_children
+    d_colors:
+        src: xorg/colors
+        dst: ~/.colors
+        link: link_children
+profiles:
+    cli:
+        dotfiles:
+            - d_nvim
+            - d_ohmyzsh_themes
+            - f_tmux
+            - f_gitconfig
+            - d_vim_runtime
+            - d_kitty
+            - f_zshrc
+    mac:
+        dotfiles:
+            - f_zsh_mac
+            - f_zsh_evs
+        include:
+            - cli
+    linux:
+        dotfiles:
+            - f_zsh_linux
+        include:
+            - cli
+    xorg:
+        dotfiles:
+            - f_xresources
+            - f_xinitrc
+            - d_bspwm
+            - d_polybar
+            - d_sxhkd
+            - d_gtk30
+            - d_colors
+    vim-only:
+        dotfiles:
+            - d_vim_runtime
+            - d_nvim
+
