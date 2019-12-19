@@ -60,6 +60,34 @@ dotfiles:
         src: kitty
         dst: ~/.config/kitty
         link: link_children
+    f_xresources:
+        src: xorg/Xresources
+        dst: ~/.Xresources
+        link: link
+    f_xinitrc:
+        src: xorg/xinitrc
+        dst: ~/.xinitrc
+        link: link
+    d_bspwm:
+        src: xorg/bspwm
+        dst: ~/.config/bspwm
+        link: link_children
+    d_polybar:
+        src: xorg/polybar
+        dst: ~/.config/polybar
+        link: link_children
+    d_sxhkd:
+        src: xorg/sxhkd
+        dst: ~/.config/sxhkd
+        link: link_children
+    d_gtk30:
+        src: xorg/gtk-3.0
+        dst: ~/.config/gtk-3.0
+        link: link_children
+    d_colors:
+        src: xorg/colors
+        dst: ~/.colors
+        link: link_children
 profiles:
     cli:
         dotfiles:
@@ -81,4 +109,17 @@ profiles:
             - f_zsh_linux
         include:
             - cli
+    xorg:
+        dotfiles:
+            - f_xresources
+            - f_xinitrc
+            - d_bspwm
+            - d_polybar
+            - d_sxhkd
+            - d_gtk30
+            - d_colors
+    vim-only:
+        dotfiles:
+            - d_vim_runtime
+            - d_nvim
 
