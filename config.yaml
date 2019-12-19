@@ -14,7 +14,7 @@ dotfiles:
     d_nvim:
         src: nvim
         dst: ~/.config/nvim
-        link: link
+        link: link_children
         actions:
             - nvim-plug-install
             - nvim-plug
