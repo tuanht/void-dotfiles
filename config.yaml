@@ -83,7 +83,6 @@ dotfiles:
     d_gtk30:
         src: xorg/gtk-3.0
         dst: ~/.config/gtk-3.0
-        link: link_children
     d_colors:
         src: xorg/colors
         dst: ~/.colors

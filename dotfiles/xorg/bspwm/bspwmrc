@@ -20,8 +20,8 @@ xrdb -merge $COLOR
 getcolors
 
 sxhkd &
-~/.dotfiles/linux/.config/polybar/launch.sh &
-compton -b &
+~/.config/polybar/launch.sh &
+# compton -b &
 
 bspc monitor -d main web comm dev code term play
 

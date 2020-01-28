@@ -32,15 +32,16 @@ alert = #bd2c40
 blue = #0a6cf5
 red = ${xrdb:color1:#222}
 cyan = ${xrdb:color6:#222}
+black = ${xrdb:color0}
 
 [bar/top]
 ;monitor = ${env:MONITOR:HDMI-1}
-width = 100%
+width = 90%
 height = 24
-;offset-x = 1%
-;offset-y = 1%
+offset-x = 5%
+offset-y = 1%
 ;radius = 6.0
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -48,8 +49,8 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 0
-border-color = #00000000
+border-size = 2
+border-color = ${colors.black}
 
 padding-left = 0
 padding-right = 2
@@ -63,7 +64,7 @@ font-2 = "Font Awesome 5 Free:size=8;1"
 
 modules-left = bspwm
 modules-center = xwindow 
-modules-right = filesystem alsa pulseaudio cpu memory temperature date powermenu
+modules-right = alsa cpu memory date
 
 tray-position = right
 tray-padding = 2
@@ -175,17 +176,17 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = "cpu "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+; format-underline = #f90000
 label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = "ram "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
+; format-underline = #4bffdc
 label = %percentage_used%%
 
 [module/wlan]
@@ -239,9 +240,9 @@ time-alt = %H:%M:%S
 ;format-prefix = 
 ;format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #0a6cf5
-format-background = ${colors.blue}
+; format-background = ${colors.primary}
 
-label =  %date% %time%
+label = %date% %time%
 label-padding = 2
 
 [module/pulseaudio]
@@ -275,8 +276,8 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 type = internal/alsa
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL
-label-volume-foreground = ${root.foreground}
+label-volume = vol
+label-volume-foreground = ${colors.foreground-alt}
 
 format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
@@ -358,9 +359,9 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
+label-open = power
 label-open-foreground = ${colors.secondary}
-label-close =  cancel
+label-close = cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}

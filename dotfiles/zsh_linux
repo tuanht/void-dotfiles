@@ -2,15 +2,20 @@
 alias ls='ls --color=auto -h'
 alias ll='ls --color=auto -lah'
 
+alias top-cpu='top -o %CPU -d 15'
+alias top-mem='top -o %MEM'
+
 if [[ -z $DISPLAY  ]] && [[ $(tty) = /dev/tty1  ]]; then
     # exec causes logged out whenever X11 session terminates
     exec startx
 fi
 
+alias sudo='sudo '
 alias emerge-search='emerge --search'
 alias emerge-install='emerge --ask'
 alias emerge-update='emerge --sync'
 alias emerge-remove='emerge --unmerge'
+alias emerge-changed-use='emerge --ask --changed-use --deep @world'
 
 alias emerge-upgrade='emerge --update --deep --with-bdeps=y @world'
 
