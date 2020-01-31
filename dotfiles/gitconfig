@@ -28,6 +28,7 @@
     udiff = diff HEAD ; diff unstaged changed
     hunk = add --patch
     pushr = push --set-upstream origin HEAD
+    pull-rsub = pull --recurse-submodules
 
 [url "git@github.com"]
     insteadOf = gh:

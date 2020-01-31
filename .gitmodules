@@ -1,3 +1,9 @@
 [submodule "dotdrop"]
 	path = dotdrop
 	url = https://github.com/deadc0de6/dotdrop.git
+[submodule "vimix-gtk-themes"]
+	path = vimix-gtk-themes
+	url = https://github.com/vinceliuice/vimix-gtk-themes
+[submodule "vimix-icon-theme"]
+	path = vimix-icon-theme
+	url = https://github.com/vinceliuice/vimix-icon-theme
