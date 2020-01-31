@@ -7,3 +7,9 @@
 [submodule "vimix-icon-theme"]
 	path = vimix-icon-theme
 	url = https://github.com/vinceliuice/vimix-icon-theme
+[submodule "Nordic"]
+	path = Nordic
+	url = https://github.com/EliverLara/Nordic
+[submodule "paper-icon-theme"]
+	path = paper-icon-theme
+	url = https://github.com/snwh/paper-icon-theme
