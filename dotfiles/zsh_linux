@@ -22,3 +22,7 @@ alias emerge-upgrade='emerge --update --deep --with-bdeps=y @world'
 # upgrade applications that are explicitly installed (the applications listed in /var/lib/portage/world)
 alias emerge-upgrade-app='emerge --update --ask @world'
 
+alias btrfs-snapshot='btrfs subvolume snapshot -r / /mnt/backup/rootfs-`date +%Y%m%d`'
+
+alias sc='scrot -d 5 -q 100 -c ~/`date +screenshot-%Y%m%d-%H%M%S`.jpg'
+

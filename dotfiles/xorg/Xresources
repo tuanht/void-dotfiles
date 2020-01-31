@@ -3,7 +3,7 @@ URxvt*scrollBar_right:   false
 
 URxvt*transparent:       false
 
-URxvt.font: xft:IBMPlexMono:pixelsize=14
+URxvt.font: xft:IBM Plex Mono:pixelsize=14
 URxvt.letterSpace: 0
 
 *antialias:  true

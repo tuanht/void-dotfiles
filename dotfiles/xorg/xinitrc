@@ -39,9 +39,6 @@ export QT_IM_MODULE=fcitx
 export GTK_IM_MODULE=fcitx
 fcitx &
 
-WALLPAPER=$(shuf -n1 -e ~/.dotfiles/wallpapers/*)
-feh --bg-fill "$WALLPAPER" &
-
 # Default session
 session=${1:-bspwm}
 case $session in

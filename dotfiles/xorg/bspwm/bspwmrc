@@ -1,5 +1,15 @@
 #! /bin/sh
 
+unset WALLPAPER
+unset COLOR
+
+source ~/.zprofile
+
+if [ -z "$WALLPAPER" ]; then
+    export WALLPAPER=$(shuf -n1 -e ~/.dotfiles/wallpapers/*)
+fi
+feh --bg-fill "$WALLPAPER" &
+
 ## Coloring
 getcolors () {
 	FOREGROUND=$(xrdb -query | grep 'foreground:'| awk '{print $NF}')
@@ -14,8 +24,10 @@ getcolors () {
 	WHITE=$(xrdb -query | grep 'color7:'| awk '{print $NF}')
 }
 xrdb ~/.Xresources
-export COLOR=$(shuf -n1 -e ~/.colors/*.enable)
-SHORTCOLOR=$(echo $COLOR | sed "s@.*/@@")
+
+if [ -z "$COLOR" ]; then
+    export COLOR=$(shuf -n1 -e ~/.colors/*.enable)
+fi
 xrdb -merge $COLOR
 getcolors
 

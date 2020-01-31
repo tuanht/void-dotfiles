@@ -86,7 +86,7 @@ dotfiles:
     d_colors:
         src: xorg/colors
         dst: ~/.colors
-        link: link_children
+        link: link
 profiles:
     cli:
         dotfiles:

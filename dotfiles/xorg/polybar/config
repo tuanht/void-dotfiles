@@ -64,7 +64,7 @@ font-2 = "Font Awesome 5 Free:size=8;1"
 
 modules-left = bspwm
 modules-center = xwindow 
-modules-right = alsa cpu memory date
+modules-right = xkeyboard alsa cpu memory date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -92,17 +92,17 @@ label = %title:0:64:...%
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
+; format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
+; format-prefix-underline = ${colors.secondary}
 
 label-layout = %layout%
-label-layout-underline = ${colors.secondary}
+; label-layout-underline = ${colors.secondary}
 
 label-indicator-padding = 2
-label-indicator-margin = 1
+; label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
+; label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
@@ -213,7 +213,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = enp2s0
+interface = enp34s0
 interval = 3.0
 
 format-connected-underline = #55aa55
@@ -231,8 +231,8 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date = " %a"
-date-alt = " %Y-%m-%d"
+date = "%a"
+date-alt = "%Y-%m-%d"
 
 time = %l:%M %p
 time-alt = %H:%M:%S
@@ -243,7 +243,7 @@ time-alt = %H:%M:%S
 ; format-background = ${colors.primary}
 
 label = %date% %time%
-label-padding = 2
+; label-padding = 2
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -275,8 +275,10 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 [module/alsa]
 type = internal/alsa
 
-format-volume = <label-volume> <bar-volume>
-label-volume = vol
+format-volume-prefix = "vol "
+format-volume-prefix-foreground = ${colors.foreground-alt}
+format-volume = <bar-volume> <label-volume>
+label-volume = %percentage%%
 label-volume-foreground = ${colors.foreground-alt}
 
 format-muted-prefix = " "
