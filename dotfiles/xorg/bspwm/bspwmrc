@@ -6,10 +6,10 @@ unset COLOR
 source ~/.zprofile
 
 if [ -z "$WALLPAPER" ]; then
-    export WALLPAPER=$(shuf -n1 -e ~/.dotfiles/wallpapers/*)
+    feh --randomize --bg-fill ~/.dotfiles/wallpapers/* &
+else
+    feh --bg-fill "$WALLPAPER" &
 fi
-feh --bg-fill "$WALLPAPER" &
-
 ## Coloring
 getcolors () {
 	FOREGROUND=$(xrdb -query | grep 'foreground:'| awk '{print $NF}')

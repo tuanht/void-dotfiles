@@ -3,9 +3,11 @@ URxvt*scrollBar_right:   false
 
 URxvt*transparent:       false
 
-URxvt.font: xft:IBM Plex Mono:pixelsize=14
+URxvt.font: -xos4-terminus-*-*-*-*-16-*-*-*-*-*-*-*
 URxvt.letterSpace: 0
 
 *antialias:  true
 *autohint:   true
+
+xterm*font: -misc-fixed-*-*-*-*-18-*-*-*-*-*-*-*
 
