@@ -19,6 +19,9 @@ set modelines=5
 
 " set noshowmode
 
+set splitbelow
+set splitright
+
 let g:lightline = {
       \ 'colorscheme': 'seoul256',
       \ 'active': {
