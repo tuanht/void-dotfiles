@@ -1,4 +1,11 @@
 # vim: set ft=zsh:
+
+export XSESSION='bspwm'
+
+export XMODIFIERS="@im=fcitx"
+export QT_IM_MODULE=fcitx
+export GTK_IM_MODULE=fcitx
+
 alias ls='ls --color=auto -h'
 alias ll='ls --color=auto -lah'
 

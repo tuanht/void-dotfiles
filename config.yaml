@@ -64,10 +64,6 @@ dotfiles:
         src: xorg/Xresources
         dst: ~/.Xresources
         link: link
-    f_xinitrc:
-        src: xorg/xinitrc
-        dst: ~/.xinitrc
-        link: link
     d_bspwm:
         src: xorg/bspwm
         dst: ~/.config/bspwm
@@ -111,7 +107,6 @@ profiles:
     xorg:
         dotfiles:
             - f_xresources
-            - f_xinitrc
             - d_bspwm
             - d_polybar
             - d_sxhkd

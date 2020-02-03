@@ -6,7 +6,7 @@ unset COLOR
 source ~/.zprofile
 
 if [ -z "$WALLPAPER" ]; then
-    feh --randomize --bg-fill ~/.dotfiles/wallpapers/* &
+    feh --recursive --randomize --bg-fill ~/.dotfiles/wallpapers/* &
 else
     feh --bg-fill "$WALLPAPER" &
 fi
@@ -31,9 +31,10 @@ fi
 xrdb -merge $COLOR
 getcolors
 
-sxhkd &
 ~/.config/polybar/launch.sh &
 # compton -b &
+
+fcitx &
 
 bspc monitor -d main web comm dev code term play
 
