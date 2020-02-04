@@ -1,0 +1,5 @@
+#!/bin/sh
+
+xset fp+ /usr/share/fonts/terminus/
+xset fp+ /usr/share/fonts/unifont/
+xset fp rehash

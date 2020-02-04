@@ -1,7 +1,7 @@
 actions:
     pre:
         nvim-plug-install: test -e ~/.local/share/nvim/site/autoload/plug.vim || curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-        oh-my-zsh: test -d ~/.oh-my-zsh || sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+        oh-my-zsh: test -d ~/.oh-my-zsh || CHSH=no RUNZSH=no sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && rm -f ~/.zshrc
         vim-runtime-install: test -d ~/.vim_runtime/vimrcs || git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime && sh ~/.vim_runtime/install_awesome_vimrc.sh
         tmux-tmp-install: test -d ~/.tmux/plugins/tpm || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     post:
@@ -64,10 +64,6 @@ dotfiles:
         src: xorg/Xresources
         dst: ~/.Xresources
         link: link
-    f_xinitrc:
-        src: xorg/xinitrc
-        dst: ~/.xinitrc
-        link: link
     d_bspwm:
         src: xorg/bspwm
         dst: ~/.config/bspwm
@@ -83,21 +79,20 @@ dotfiles:
     d_gtk30:
         src: xorg/gtk-3.0
         dst: ~/.config/gtk-3.0
-        link: link_children
     d_colors:
         src: xorg/colors
         dst: ~/.colors
-        link: link_children
+        link: link
 profiles:
     cli:
         dotfiles:
             - d_nvim
-            - d_ohmyzsh_themes
             - f_tmux
             - f_gitconfig
             - d_vim_runtime
             - d_kitty
             - f_zshrc
+            - d_ohmyzsh_themes
     mac:
         dotfiles:
             - f_zsh_mac
@@ -112,7 +107,6 @@ profiles:
     xorg:
         dotfiles:
             - f_xresources
-            - f_xinitrc
             - d_bspwm
             - d_polybar
             - d_sxhkd

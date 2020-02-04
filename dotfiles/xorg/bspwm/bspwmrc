@@ -1,5 +1,15 @@
 #! /bin/sh
 
+unset WALLPAPER
+unset COLOR
+
+source ~/.zprofile
+
+if [ -z "$WALLPAPER" ]; then
+    feh --recursive --randomize --bg-fill ~/.dotfiles/wallpapers/* &
+else
+    feh --bg-fill "$WALLPAPER" &
+fi
 ## Coloring
 getcolors () {
 	FOREGROUND=$(xrdb -query | grep 'foreground:'| awk '{print $NF}')
@@ -14,14 +24,17 @@ getcolors () {
 	WHITE=$(xrdb -query | grep 'color7:'| awk '{print $NF}')
 }
 xrdb ~/.Xresources
-export COLOR=$(shuf -n1 -e ~/.colors/*.enable)
-SHORTCOLOR=$(echo $COLOR | sed "s@.*/@@")
+
+if [ -z "$COLOR" ]; then
+    export COLOR=$(shuf -n1 -e ~/.colors/*.enable)
+fi
 xrdb -merge $COLOR
 getcolors
 
-sxhkd &
-~/.dotfiles/linux/.config/polybar/launch.sh &
-compton -b &
+~/.config/polybar/launch.sh &
+# compton -b &
+
+fcitx &
 
 bspc monitor -d main web comm dev code term play
 

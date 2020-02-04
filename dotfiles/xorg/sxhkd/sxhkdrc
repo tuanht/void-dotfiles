@@ -4,10 +4,10 @@
 
 # terminal emulator
 super + Return
-    st
+    urxvt
 
 super + F1
-        firefox-bin
+    firefox-bin
 
 super + F2
 	pcmanfm
@@ -23,6 +23,16 @@ super + q
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
+
+# alsa
+XF86AudioRaiseVolume
+    amixer set Master 5%+
+
+XF86AudioLowerVolume
+    amixer set Master 5%-
+
+XF86AudioMute
+    amixer set Master toggle
 
 #
 # bspwm hotkeys

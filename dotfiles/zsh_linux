@@ -1,19 +1,41 @@
 # vim: set ft=zsh:
+
+export XSESSION='bspwm'
+
+export XMODIFIERS="@im=fcitx"
+export QT_IM_MODULE=fcitx
+export GTK_IM_MODULE=fcitx
+
 alias ls='ls --color=auto -h'
 alias ll='ls --color=auto -lah'
+
+alias top-cpu='top -o %CPU -d 15'
+alias top-mem='top -o %MEM'
 
 if [[ -z $DISPLAY  ]] && [[ $(tty) = /dev/tty1  ]]; then
     # exec causes logged out whenever X11 session terminates
     exec startx
 fi
 
-alias emerge-search='emerge --search'
-alias emerge-install='emerge --ask'
-alias emerge-update='emerge --sync'
-alias emerge-remove='emerge --unmerge'
+alias sudo='sudo '
+alias ems='emerge --search'
+alias emi='sudo emerge --ask --verbose'
+alias emsync='sudo emerge --sync'
+alias emr='sudo emerge --ask --unmerge'
 
-alias emerge-upgrade='emerge --update --deep --with-bdeps=y @world'
+alias emcu='sudo emerge --ask --changed-use --deep @world'
+
+# After having altered USE flags, the system should be updated to reflect the necessary changes.
+alias emnu='sudo emerge --ask --update --deep --newuse @world'
+
+alias emu='sudo emerge --ask --update --deep --with-bdeps=y @world'
 
 # upgrade applications that are explicitly installed (the applications listed in /var/lib/portage/world)
-alias emerge-upgrade-app='emerge --update --ask @world'
+alias emeua='sudo emerge --update --ask @world'
+
+alias bss='btrfs subvolume snapshot -r / /mnt/backup/rootfs-`date +%Y%m%d`'
+alias bsl='btrfs subvolume list /'
+alias bsd='btrfs subvolume delete '
+
+alias sc='scrot -d 5 -c ~/`date +screenshot-%Y%m%d-%H%M%S`.png'
 
