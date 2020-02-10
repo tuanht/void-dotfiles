@@ -33,7 +33,7 @@ getcolors
 
 ~/.config/polybar/launch.sh &
 # compton -b &
-
+~/.config/bspwm/xscreensaver.sh &
 fcitx &
 
 bspc monitor -d main web comm dev code term play

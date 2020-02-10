@@ -39,3 +39,6 @@ alias bsd='btrfs subvolume delete '
 
 alias sc='scrot -d 5 -c ~/`date +screenshot-%Y%m%d-%H%M%S`.png'
 
+# capture xevent keyboard
+alias xevents="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'"
+

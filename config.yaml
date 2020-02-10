@@ -83,6 +83,14 @@ dotfiles:
         src: xorg/colors
         dst: ~/.colors
         link: link
+    f_xscreensaver_launch:
+        src: xorg/xscreensaver/xscreensaver.sh
+        dst: ~/.config/bspwm/xscreensaver.sh
+        link: link
+    f_xscreensaver_resource:
+        src: xorg/xscreensaver/xscreensaver
+        dst: ~/.xscreensaver
+        link: link
 profiles:
     cli:
         dotfiles:
@@ -112,6 +120,8 @@ profiles:
             - d_sxhkd
             - d_gtk30
             - d_colors
+            - f_xscreensaver_launch
+            - f_xscreensaver_resource
     vim-only:
         dotfiles:
             - d_vim_runtime

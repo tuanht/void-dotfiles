@@ -12,13 +12,16 @@ super + F1
 super + F2
 	pcmanfm
 
+super + F3
+    spotify
+
 # program launcher
 super + @space
 	dmenu_run -b
 
 # lock screen
-super + q
-    slock
+super + ctrl + q
+    xscreensaver-command -lock
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -33,6 +36,15 @@ XF86AudioLowerVolume
 
 XF86AudioMute
     amixer set Master toggle
+
+XF86AudioPlay
+    dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+
+XF86AudioNext
+    dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+
+XF86AudioPrev
+    dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
 
 #
 # bspwm hotkeys

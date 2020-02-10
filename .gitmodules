@@ -13,3 +13,6 @@
 [submodule "paper-icon-theme"]
 	path = paper-icon-theme
 	url = https://github.com/snwh/paper-icon-theme
+[submodule "polybar-spotify"]
+	path = polybar-spotify
+	url = git@github.com:Jvanrhijn/polybar-spotify.git
