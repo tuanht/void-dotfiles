@@ -38,7 +38,7 @@ dotfiles:
         link: link
     d_ohmyzsh_themes:
         src: oh-my-zsh/themes
-        dst: ~/.oh-my-zsh/themes
+        dst: ~/.oh-my-zsh/custom/themes
         link: link_children
     f_tmux:
         src: tmux.conf

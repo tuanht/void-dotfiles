@@ -2,10 +2,10 @@
 
 [user]
 	name = Tuan Ha
-	email = htux@icloud.com
+	email = tuanht@users.noreply.github.com
 [core]
 	excludesfile = ~/.gitignore_global
-	editor = nvim
+	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
