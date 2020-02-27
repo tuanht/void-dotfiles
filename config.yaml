@@ -91,6 +91,10 @@ dotfiles:
         src: xorg/xscreensaver/xscreensaver
         dst: ~/.xscreensaver
         link: link
+    f_xmodmap:
+        src: xorg/Xmodmap
+        dst: ~/.Xmodmap
+        link: link
 profiles:
     cli:
         dotfiles:
@@ -115,6 +119,7 @@ profiles:
     xorg:
         dotfiles:
             - f_xresources
+            - f_xmodmap
             - d_bspwm
             - d_polybar
             - d_sxhkd
