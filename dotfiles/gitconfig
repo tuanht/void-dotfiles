@@ -22,6 +22,7 @@
 [alias]
 	s = status -s
     i = add -i
+    c = commit -S
 	amend = commit --amend --reuse-message=HEAD
     cdiff = diff --cached
     sdiff = diff --staged
