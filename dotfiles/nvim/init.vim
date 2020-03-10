@@ -5,7 +5,7 @@ source ~/.config/nvim/statusline.vim
 source ~/.config/nvim/plugins_init.vim
 source ~/.config/nvim/map.vim
 
-colorscheme cobalt2
+colorscheme nord
 
 set number
 

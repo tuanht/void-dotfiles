@@ -7,6 +7,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'rakr/vim-one'
 Plug 'GertjanReynaert/cobalt2-vim-theme'
 Plug 'arcticicestudio/nord-vim'
+Plug 'arcticicestudio/nord-vim'
 
 " Git
 Plug 'airblade/vim-gitgutter'
