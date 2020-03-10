@@ -49,7 +49,6 @@ dotfiles:
     f_gitconfig:
         src: gitconfig
         dst: ~/.gitconfig
-        link: link
     d_vim_runtime:
         src: vim_runtime
         dst: ~/.vim_runtime

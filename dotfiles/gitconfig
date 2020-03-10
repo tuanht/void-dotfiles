@@ -1,29 +1,30 @@
 ; vim: set ft=gitconfig:
 
 [user]
-	name = Tuan Ha
-	email = tuanht@users.noreply.github.com
+    name = Tuan Ha
+    email = tuanht@users.noreply.github.com
+    signingkey = {{@@ env['GIT_SIGNING_KEY'] @@}}
 [core]
-	excludesfile = ~/.gitignore_global
-	editor = vim
+    excludesfile = ~/.gitignore_global
+    editor = vim
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
 [gpg]
 [tag]
 [alias]
-	s = status -s
+    s = status -s
     i = add -i
     c = commit -S
-	amend = commit --amend --reuse-message=HEAD
+    amend = commit --amend --reuse-message=HEAD
     cdiff = diff --cached
     sdiff = diff --staged
     udiff = diff HEAD ; diff unstaged changed
