@@ -11,6 +11,7 @@ Plug 'arcticicestudio/nord-vim'
 
 " Git
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 
 " Files
 Plug 'ctrlpvim/ctrlp.vim'
