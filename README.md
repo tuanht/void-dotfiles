@@ -28,11 +28,12 @@ pip3 install -r dotdrop/requirements.txt --user
 
 ## Fonts
 
-List of my favourite fonts (`font-`'s homebrew prefix):
-
-1. [Rubik](https://www.fontsquirrel.com/fonts/rubik)
-2. [IBM Plex](https://www.ibm.com/plex/)
-3. [Terminus](https://files.ax86.net/terminus-ttf/) (TTF)
-4. [Anonymous Pro](https://www.marksimonson.com/fonts/view/anonymous-pro) + Nerd (`-nerd-font`)
-5. [Hack](https://sourcefoundry.org/hack/) + Nerd (`-nerd-font`)
+| Platform | macOS (brew cask) | Gentoo | Ubuntu |
+|----------|-------------------|--------|--------|
+| Rubik | font-rubik | [Rubik](https://www.fontsquirrel.com/fonts/rubik) | - |
+| [IBM Plex](https://www.ibm.com/plex/) | font-ibm-plex | media-fonts/ibm-plex | |
+| [Terminus](https://files.ax86.net/terminus-ttf/) | font-terminus | media-fonts/terminus | xfonts-terminus |
+| [Anonymous Pro](https://www.marksimonson.com/fonts/view/anonymous-pro) | font-anonymous-pro{-nerd-font} | media-fonts/anonymous-pro | ttf-anonymous-pro |
+| [Hack](https://sourcefoundry.org/hack/) | font-hack{-nerd-font} | media-fonts/hack | |
+| Source Code Pro | font-source-code-pro | [v2.030](https://github.com/adobe-fonts/source-code-pro/releases/download/2.030R-ro%2F1.050R-it/source-code-pro-2.030R-ro-1.050R-it.zip) | - |
 
