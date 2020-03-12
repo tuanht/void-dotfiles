@@ -14,8 +14,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
 " Files
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim' " Fuzzy finding: finding files
 Plug 'chr4/nginx.vim'
+Plug 'mileszs/ack.vim' " Searching files
 
 " Coding
 Plug 'tpope/vim-surround'
