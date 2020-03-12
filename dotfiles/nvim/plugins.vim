@@ -20,6 +20,7 @@ Plug 'mileszs/ack.vim' " Searching files
 
 " Coding
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 " This plugin enables the Vim conceal feature
 " For example, users utilizing the built in json.vim syntax file will no longer see quotation marks in their JSON files.
