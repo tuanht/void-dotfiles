@@ -1,5 +1,7 @@
 " This file is for init things relate to plugins
 
+nnoremap <silent> <leader>z :Goyo<cr>
+
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 " Change open file behavior
