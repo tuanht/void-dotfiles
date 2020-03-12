@@ -16,3 +16,9 @@
 [submodule "polybar-spotify"]
 	path = polybar-spotify
 	url = git@github.com:Jvanrhijn/polybar-spotify.git
+[submodule "flat-remix"]
+	path = flat-remix
+	url = git@github.com:daniruiz/flat-remix.git
+[submodule "nord-gnome-terminal"]
+	path = nord-gnome-terminal
+	url = https://github.com/arcticicestudio/nord-gnome-terminal.git
