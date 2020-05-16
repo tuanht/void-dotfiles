@@ -26,6 +26,11 @@ pip3 install -r dotdrop/requirements.txt --user
 - Updating plugins: `prefix` + U
 - Removing plugins: `prefix` + alt + u
 
+## Neovim
+
+- Install composer for phpactor. Check for status `:call phpactor#Status()`.
+- Install `neovim` module for python3 `pip3 install neovim`.
+
 ## Fonts
 
 | Platform | macOS (brew cask) | Gentoo | Ubuntu |
