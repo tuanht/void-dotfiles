@@ -11,6 +11,7 @@ alias ll='ls --color=auto -lah'
 
 alias top-cpu='top -o %CPU -d 15'
 alias top-mem='top -o %MEM'
+alias ps-tree='ps auxf'
 
 if [[ -z $DISPLAY  ]] && [[ $(tty) = /dev/tty1  ]]; then
     # exec causes logged out whenever X11 session terminates
