@@ -86,7 +86,6 @@ export PATH="/usr/local/sbin:$PATH"
 [ -d "$HOME/bin" ] && export PATH="$PATH:$HOME/bin"
 
 [ -s "$HOME/.zsh_os" ]      && source $HOME/.zsh_os
-[ -d "$HOME/everystay" ]    && source $HOME/.zsh_evs
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
