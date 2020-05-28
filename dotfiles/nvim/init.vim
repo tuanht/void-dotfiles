@@ -5,7 +5,16 @@ source ~/.config/nvim/statusline.vim
 source ~/.config/nvim/plugins_init.vim
 source ~/.config/nvim/map.vim
 
-colorscheme nord
+""""" enable 24bit true color
+
+" If you have vim >=8.0 or Neovim >= 0.1.5
+if (has("termguicolors"))
+    set termguicolors
+endif
+
+""""" enable theme
+
+colorscheme night-owl
 
 set number
 

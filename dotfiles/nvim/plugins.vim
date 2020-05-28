@@ -9,6 +9,7 @@ Plug 'GertjanReynaert/cobalt2-vim-theme'
 Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/goyo.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'haishanh/night-owl.vim'
 
 " Git
 Plug 'airblade/vim-gitgutter'
