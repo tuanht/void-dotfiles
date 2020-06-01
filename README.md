@@ -2,22 +2,10 @@
 
 My personal repository for storing configurations across *nix operating systems.
 
-## Clone this project
+## Quick start
 
 ```shell
-git clone git@github.com:tuanht/dotfiles .dotfiles
-cd .dotfiles
-git submodule update --init
-```
-
-## Install
-
-For MacOS users, make sure to install `realpath` through homebrew (part of coreutils).
-
-```shell
-pip3 install -r dotdrop/requirements.txt --user
-./dotdrop/bootstrap.sh
-./dotdrop.sh install --profile=<mac|linux|xorg|vim-only>
+yadm clone git@github.com:tuanht/dotfiles
 ```
 
 ## Tmux Plugin Manager quick reference:
@@ -25,11 +13,6 @@ pip3 install -r dotdrop/requirements.txt --user
 - Installing plugins: Press `prefix` + I (capital i, as in Install) to fetch the plugin.
 - Updating plugins: `prefix` + U
 - Removing plugins: `prefix` + alt + u
-
-## Neovim
-
-- Install composer for phpactor. Check for status `:call phpactor#Status()`.
-- Install `neovim` module for python3 `pip3 install neovim`.
 
 ## Fonts
 

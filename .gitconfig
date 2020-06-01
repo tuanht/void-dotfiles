@@ -3,7 +3,7 @@
 [user]
     name = Tuan Ha
     email = tuanht@users.noreply.github.com
-    signingkey = {{@@ env['GIT_SIGNING_KEY'] @@}}
+    signingkey = 8812D125486B31E7
 [core]
     excludesfile = ~/.gitignore_global
     editor = nvim
