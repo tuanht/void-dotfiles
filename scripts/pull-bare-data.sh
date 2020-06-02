@@ -7,7 +7,7 @@ NOTE_PREFIX="$HOME/notes"
 NOW=$(date +%s)
 RANGE=$(expr 60 \* 60 \* 24)
 
-function stat_modify() {
+function date_modify() {
     case $OS_TYPE in
         "Linux")
             echo $(stat -c %Y $1)
@@ -21,7 +21,7 @@ function stat_modify() {
 # Pass data
 echo 'Checking pass status...'
 
-last_pulled=$(stat_modify $PASS_PREFIX/.git/FETCH_HEAD)
+last_pulled=$(date_modify $PASS_PREFIX/.git/FETCH_HEAD)
 diff=$(expr $NOW - $last_pulled)
 
 if [ "$diff" -gt "$RANGE" ]; then
@@ -32,7 +32,7 @@ fi
 # dotfiles
 echo 'Checking dotfiles status...'
 
-last_pulled=$(stat_modify $PASS_PREFIX/.git/FETCH_HEAD)
+last_pulled=$(date_modify $PASS_PREFIX/.git/FETCH_HEAD)
 diff=$(expr $NOW - $last_pulled)
 
 if [ "$diff" -gt "$RANGE" ]; then
@@ -43,7 +43,7 @@ fi
 # notes
 echo 'Checking notes status...'
 
-last_pulled=$(stat_modify $NOTE_PREFIX/.git/FETCH_HEAD)
+last_pulled=$(date_modify $NOTE_PREFIX/.git/FETCH_HEAD)
 diff=$(expr $NOW - $last_pulled)
 
 if [ "$diff" -gt "$RANGE" ]; then
