@@ -1,0 +1,1 @@
+/Users/tuanht/.dotfiles/dotfiles/oh-my-zsh/themes/geoffgarside_forked.zsh-theme

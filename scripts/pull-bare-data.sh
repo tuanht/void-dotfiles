@@ -53,12 +53,12 @@ if [ "$diff" -gt "$RANGE" ]; then
 fi
 
 # todo
-echo 'Checking todo status...'
+# echo 'Checking todo status...'
 
-last_pulled=$(date_modify $TODO_PREFIX/.git/FETCH_HEAD)
-diff=$(expr $NOW - $last_pulled)
+# last_pulled=$(date_modify $TODO_PREFIX/.git/FETCH_HEAD)
+# diff=$(expr $NOW - $last_pulled)
 
-if [ "$diff" -gt "$RANGE" ]; then
-    echo 'Updating todo...'
-    git -C $TODO_PREFIX pull --ff-only
-fi
+# if [ "$diff" -gt "$RANGE" ]; then
+#     echo 'Updating todo...'
+#     git -C $TODO_PREFIX pull --ff-only
+# fi
