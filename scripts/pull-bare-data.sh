@@ -33,7 +33,7 @@ fi
 # dotfiles
 echo 'Checking dotfiles status...'
 
-last_pulled=$(date_modify $PASS_PREFIX/.git/FETCH_HEAD)
+last_pulled=$(date_modify $YADM_PREFIX/FETCH_HEAD)
 diff=$(expr $NOW - $last_pulled)
 
 if [ "$diff" -gt "$RANGE" ]; then
