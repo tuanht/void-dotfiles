@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 OS_TYPE="$(uname)"
 PASS_PREFIX="$HOME/.password-store"
