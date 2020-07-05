@@ -79,7 +79,6 @@ export LC_CTYPE=UTF-8
 # For a full list of active aliases, run `alias`.
 
 alias zshconfig="nvim ~/.zshrc"
-alias dotdrop="~/.dotfiles/dotdrop.sh --cfg=~/.dotfiles/config.yaml"
 
 export LC_ALL=C
 export PATH="/usr/local/sbin:$PATH"
