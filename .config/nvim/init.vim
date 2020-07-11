@@ -19,3 +19,8 @@ set number
 set splitbelow
 set splitright
 
+""""" Vim needs a more POSIX compatible shell than fish
+if &shell =~# 'fish$'
+    set shell=sh
+endif
+

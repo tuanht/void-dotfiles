@@ -11,6 +11,9 @@ Plug 'junegunn/goyo.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'haishanh/night-owl.vim'
 
+" Languages
+Plug 'dag/vim-fish'
+
 " Git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
