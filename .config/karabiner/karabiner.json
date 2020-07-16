@@ -225,6 +225,22 @@
                             "to": {
                                 "key_code": "right_command"
                             }
+                        },
+                        {
+                            "from": {
+                                "key_code": "home"
+                            },
+                            "to": {
+                                "consumer_key_code": "volume_increment"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "end"
+                            },
+                            "to": {
+                                "consumer_key_code": "volume_decrement"
+                            }
                         }
                     ]
                 }
