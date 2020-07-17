@@ -108,9 +108,34 @@
                         "product_id": 637,
                         "vendor_id": 1452
                     },
-                    "ignore": true,
+                    "ignore": false,
                     "manipulate_caps_lock_led": true,
-                    "simple_modifications": []
+                    "simple_modifications": [
+                        {
+                            "from": {
+                                "key_code": "caps_lock"
+                            },
+                            "to": {
+                                "key_code": "right_control"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "left_control"
+                            },
+                            "to": {
+                                "key_code": "caps_lock"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "right_shift"
+                            },
+                            "to": {
+                                "key_code": "escape"
+                            }
+                        }
+                    ]
                 },
                 {
                     "disable_built_in_keyboard_if_exists": true,
@@ -167,7 +192,7 @@
                     ]
                 },
                 {
-                    "disable_built_in_keyboard_if_exists": true,
+                    "disable_built_in_keyboard_if_exists": false,
                     "fn_function_keys": [],
                     "identifiers": {
                         "is_keyboard": true,
@@ -204,6 +229,22 @@
                         },
                         {
                             "from": {
+                                "key_code": "end"
+                            },
+                            "to": {
+                                "consumer_key_code": "volume_decrement"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "home"
+                            },
+                            "to": {
+                                "consumer_key_code": "volume_increment"
+                            }
+                        },
+                        {
+                            "from": {
                                 "key_code": "left_command"
                             },
                             "to": {
@@ -224,22 +265,6 @@
                             },
                             "to": {
                                 "key_code": "right_command"
-                            }
-                        },
-                        {
-                            "from": {
-                                "key_code": "home"
-                            },
-                            "to": {
-                                "consumer_key_code": "volume_increment"
-                            }
-                        },
-                        {
-                            "from": {
-                                "key_code": "end"
-                            },
-                            "to": {
-                                "consumer_key_code": "volume_decrement"
                             }
                         }
                     ]
@@ -343,7 +368,7 @@
                     }
                 }
             ],
-            "name": "FILCO",
+            "name": "Happy Hacking",
             "parameters": {
                 "delay_milliseconds_before_open_device": 1000
             },
