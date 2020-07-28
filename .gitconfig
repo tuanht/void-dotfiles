@@ -24,6 +24,7 @@
     s = status -s
     i = add -i
     c = commit -S
+    b = branch
     amend = commit -S --amend --reuse-message=HEAD
     cdiff = diff --cached
     sdiff = diff --staged
