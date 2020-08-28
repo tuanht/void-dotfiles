@@ -2,4 +2,5 @@ tags
 **/.DS_Store
 **/*.tfstate*
 **/.terraform/
+**/.vscode/
 
