@@ -79,6 +79,7 @@ export LC_CTYPE=UTF-8
 # For a full list of active aliases, run `alias`.
 
 alias zshconfig="nvim ~/.zshrc"
+alias whatmyip="curl https://api.ipify.org"
 
 export LC_ALL=C
 export PATH="/usr/local/sbin:$PATH"
