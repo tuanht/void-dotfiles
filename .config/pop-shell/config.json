@@ -1,0 +1,18 @@
+{
+  "float": [
+    {
+      "class": "Gnome-control-center",
+      "title": "Settings"
+    }, {
+        "class": "Gnome-tweaks",
+        "title": "GNOME Tweaks"
+    }, {
+        "class": "Gnome-calculator",
+        "title": "Calculator"
+    }, {
+        "class": "TelegramDesktop",
+        "title": "Telegram"
+    }
+  ],
+  "log_on_focus": false
+}
