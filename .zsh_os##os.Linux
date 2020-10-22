@@ -2,9 +2,9 @@
 
 export XSESSION='bspwm'
 
-export XMODIFIERS="@im=fcitx"
-export QT_IM_MODULE=fcitx
-export GTK_IM_MODULE=fcitx
+export XMODIFIERS="@im=ibus"
+export QT_IM_MODULE=ibus
+export GTK_IM_MODULE=ibus
 
 alias ls='ls --color=auto -h'
 alias ll='ls --color=auto -lah'
@@ -42,4 +42,9 @@ alias sc='scrot -d 5 -c ~/`date +screenshot-%Y%m%d-%H%M%S`.png'
 
 # capture xevent keyboard
 alias xevents="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'"
+
+# for systemd-based distro
+alias kvc-status="sudo systemctl status kerio-kvc.service"
+alias kvc-start="sudo systemctl start kerio-kvc.service"
+alias kvc-stop="sudo systemctl stop kerio-kvc.service"
 
