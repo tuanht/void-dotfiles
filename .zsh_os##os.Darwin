@@ -9,6 +9,7 @@ alias top-mem="top -o mem -s 10"
 alias pstree-of="pstree -p "
 
 export ICLOUD_PATH="$HOME/Library/Mobile Documents/com~apple~CloudDocs/"
+[ -d "/Applications/MEGAcmd.app" ] && export PATH=/Applications/MEGAcmd.app/Contents/MacOS:$PATH
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
