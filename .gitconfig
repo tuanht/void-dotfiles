@@ -24,6 +24,8 @@
     s = status -s
     i = add -i
     c = commit -S
+    u = reset --soft HEAD^
+    us = reset HEAD
     p = push
     b = branch
     a = commit -S --amend --reuse-message=HEAD
