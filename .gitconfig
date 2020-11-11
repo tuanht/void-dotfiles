@@ -35,6 +35,7 @@
     hunk = add --patch
     pr = push --set-upstream origin HEAD
     pull-rsub = pull --recurse-submodules
+    rebase-to = rebase -i
 
 [url "git@github.com"]
     insteadOf = gh:
