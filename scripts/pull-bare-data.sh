@@ -29,13 +29,13 @@ if [ "$diff" -gt "$RANGE" ]; then
 fi
 
 # notes
-# echo 'Checking notes status...'
+echo 'Checking notes status...'
 
-# last_pulled=$(date_modify $NOTE_PREFIX/.git/FETCH_HEAD)
-# diff=$(expr $NOW - $last_pulled)
+last_pulled=$(date_modify $NOTE_PREFIX/.git/FETCH_HEAD)
+diff=$(expr $NOW - $last_pulled)
 
-# if [ "$diff" -gt "$RANGE" ]; then
-#     echo 'Updating notes...'
-#     git -C $NOTE_PREFIX pull --ff-only
-# fi
+if [ "$diff" -gt "$RANGE" ]; then
+    echo 'Updating notes...'
+    git -C $NOTE_PREFIX pull --ff-only
+fi
 
