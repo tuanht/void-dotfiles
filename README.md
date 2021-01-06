@@ -2,6 +2,23 @@
 
 My personal repository for storing configurations across *nix operating systems.
 
+## Pre-requirements
+
+Install `git`, `git-lfs`, `curl`, `neovim`, `tmux` and `zsh` (non-macOS only)
+
+### macOS
+
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install git git-lfs curl neovim tmux
+```
+
+### Ubuntu-based Linux
+
+```shell
+sudo apt install git git-lfs curl neovim tmux zsh
+```
+
 ## Quick start
 
 ```shell
