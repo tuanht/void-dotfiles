@@ -2,10 +2,6 @@
 
 export XSESSION='bspwm'
 
-export XMODIFIERS="@im=ibus"
-export QT_IM_MODULE=ibus
-export GTK_IM_MODULE=ibus
-
 alias ls='ls --color=auto -h'
 alias ll='ls --color=auto -lah'
 
