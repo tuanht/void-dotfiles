@@ -20,3 +20,6 @@ fi
 if [ ! -d ~/.tmux/plugins/tpm ]; then
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
+
+ln -s ~/.vim_runtime/vimrcs/basic.vim ~/.config/nvim/basic.vim
+

@@ -1,5 +1,10 @@
 source ~/.config/nvim/plugins.vim
+
+try
 source ~/.config/nvim/basic.vim
+catch
+endtry
+
 source ~/.config/nvim/statusline.vim
 
 source ~/.config/nvim/plugins_init.vim
