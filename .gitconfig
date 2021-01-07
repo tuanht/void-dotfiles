@@ -6,7 +6,7 @@
     signingkey = 8812D125486B31E7
 [core]
     excludesfile = ~/.gitignore_global
-    editor = nvim
+    editor = vim
 [difftool "sourcetree"]
     cmd = opendiff \"$LOCAL\" \"$REMOTE\"
     path = 
