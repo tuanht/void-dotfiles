@@ -84,8 +84,8 @@ alias dir-usage="du -hs * | sort -hr"
 alias y="yadm "
 
 export LC_ALL=C
-export PATH="$HOME/bin:/usr/local/sbin:$PATH"
-[ -d "$HOME/bin" ] && export PATH="$PATH:$HOME/bin"
+export PATH="/usr/local/sbin:$PATH"
+[ -d "$HOME/bin" ] && export PATH="$HOME/bin:$PATH"
 
 [ -s "$HOME/.zsh_os" ]      && source $HOME/.zsh_os
 
