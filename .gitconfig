@@ -21,6 +21,9 @@
 [gpg]
 [tag]
 [alias]
+    stt = status
+    chk = checkout
+    p = pull
     s = status -s
     i = add -i
     c = commit -S
