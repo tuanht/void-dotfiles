@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Cryptomator (HiDPI)
+Version=1.5.11
+Comment=Cloud Storage Encryption Utility
+Exec=env GDK_SCALE=2 /usr/bin/cryptomator %f
+Icon=org.cryptomator.Cryptomator
+Terminal=false
+Type=Application
+Categories=Utility;Security;FileTools;
+MimeType=application/x-vnd.cryptomator-vault-metadata
+StartupWMClass=org-cryptomator-launcher-Cryptomator
