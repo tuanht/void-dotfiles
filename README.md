@@ -33,6 +33,8 @@ yadm clone git@github.com:tuanht/dotfiles
 
 ## Fonts
 
+For macOS: `brew tap homebrew/cask-fonts`
+
 | Platform | macOS (brew cask) | Gentoo | Ubuntu |
 |----------|-------------------|--------|--------|
 | Rubik | font-rubik | [Rubik](https://www.fontsquirrel.com/fonts/rubik) | - |
