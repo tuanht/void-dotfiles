@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 OS_TYPE="$(uname)"
-YADM_PREFIX="$HOME/.config/yadm/repo.git"
+YADM_PREFIX="$HOME/.local/share/yadm/repo.git"
 NOTE_PREFIX="$HOME/notes"
 NOW=$(date +%s)
 RANGE=$(expr 60 \* 60 \* 24)
