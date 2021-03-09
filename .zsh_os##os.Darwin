@@ -11,6 +11,8 @@ alias pstree-of="pstree -p "
 export ICLOUD_PATH="$HOME/Library/Mobile Documents/com~apple~CloudDocs/"
 [ -d "/Applications/MEGAcmd.app" ] && export PATH=/Applications/MEGAcmd.app/Contents/MacOS:$PATH
 
+[ -d "/usr/local/opt/php@7.3" ] && export PATH="/usr/local/opt/php@7.3/bin:/usr/local/opt/php@7.3/sbin:$PATH"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 

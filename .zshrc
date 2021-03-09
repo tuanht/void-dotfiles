@@ -79,6 +79,7 @@ alias y="yadm "
 export LC_ALL=C
 export PATH="/usr/local/sbin:$PATH"
 [ -d "$HOME/bin" ] && export PATH="$HOME/bin:$PATH"
+[ -d "$HOME/.symfony" ] && export PATH="$HOME/.symfony/bin:$PATH"
 
 [ -s "$HOME/.zsh_os" ]      && source $HOME/.zsh_os
 

@@ -26,6 +26,7 @@
     p = pull
     s = status -s
     i = add -i
+    r = restore --staged
     c = commit -S
     u = reset --soft HEAD^
     us = reset HEAD
