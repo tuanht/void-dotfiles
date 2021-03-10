@@ -74,7 +74,7 @@ export LC_CTYPE=UTF-8
 alias zshconfig="nvim ~/.zshrc"
 alias whatmyip="curl https://api.ipify.org"
 alias dir-usage="du -hs * | sort -hr"
-alias y="yadm "
+alias y="yadm --yadm-repo $HOME/.local/share/yadm/repo.git "
 
 export LC_ALL=C
 export PATH="/usr/local/sbin:$PATH"
