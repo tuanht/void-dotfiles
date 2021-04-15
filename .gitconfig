@@ -26,9 +26,9 @@
     p = pull
     s = status -s
     i = add -i
-    r = restore --staged
+    unstage = restore --staged
     c = commit -S
-    u = reset --soft HEAD^
+    undo-commit = reset --soft HEAD^
     us = reset HEAD
     b = branch
     a = commit -S --amend --reuse-message=HEAD
@@ -39,6 +39,8 @@
     pr = push --set-upstream origin HEAD
     pull-rsub = pull --recurse-submodules
     rebase-to = rebase -i
+    clean-dry-run = clean -d -n
+    clean-force = clean -d -f
 
 [url "git@github.com"]
     insteadOf = gh:
