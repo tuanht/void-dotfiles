@@ -31,7 +31,7 @@
     undo-commit = reset --soft HEAD^
     us = reset HEAD
     b = branch
-    a = commit -S --amend --reuse-message=HEAD
+    amend = commit -S --amend --reuse-message=HEAD
     cd = diff --cached
     sd = diff --staged
     ud = diff HEAD ; diff unstaged changed

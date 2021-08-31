@@ -75,6 +75,9 @@ alias zshconfig="nvim ~/.zshrc"
 alias whatmyip="curl https://api.ipify.org"
 alias dir-usage="du -hs * | sort -hr"
 alias y="yadm --yadm-repo $HOME/.local/share/yadm/repo.git "
+alias gp="git pull"
+alias gs="git status -s"
+alias gc="git commit -S"
 
 export LC_ALL=C
 export PATH="/usr/local/sbin:$PATH"
