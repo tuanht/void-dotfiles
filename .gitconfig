@@ -23,6 +23,7 @@
 [alias]
     stt = status
     chk = checkout
+    chk-prev = switch -
     p = pull
     s = status -s
     i = add -i
