@@ -1,0 +1,28 @@
+# vim: set ft=zsh:
+
+export XSESSION='bspwm'
+
+if [[ -z $DISPLAY  ]] && [[ $(tty) = /dev/tty1  ]]; then
+    # exec causes logged out whenever X11 session terminates
+    exec startx
+fi
+
+alias ems='emerge --search'
+alias emi='sudo emerge --ask --verbose'
+alias emsync='sudo emerge --sync'
+alias emr='sudo emerge --ask --unmerge'
+
+alias emcu='sudo emerge --ask --changed-use --deep @world'
+
+# After having altered USE flags, the system should be updated to reflect the necessary changes.
+alias emnu='sudo emerge --ask --update --deep --newuse @world'
+
+alias emu='sudo emerge --ask --update --deep --with-bdeps=y @world'
+
+# upgrade applications that are explicitly installed (the applications listed in /var/lib/portage/world)
+alias emeua='sudo emerge --update --ask @world'
+
+alias sc='scrot -d 5 -c ~/`date +screenshot-%Y%m%d-%H%M%S`.png'
+
+# capture xevent keyboard
+alias xevents="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'"

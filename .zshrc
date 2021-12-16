@@ -1,14 +1,18 @@
+# vim: set ft=zsh:
+
+OS_TYPE="$(uname)"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/tuanht/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="candy"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -79,7 +83,9 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=C
+export LC_CTYPE=UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -99,6 +105,24 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias zshconfig="nvim ~/.zshrc"
+alias whatmyip="curl https://api.ipify.org"
+alias dir-usage="du -hs * | sort -hr"
+alias y="yadm --yadm-repo $HOME/.local/share/yadm/repo.git "
+alias n="npm "
+alias gp="git pull"
+alias gs="git status -s"
+alias gc="git commit -S"
+
+export PATH="/usr/local/sbin:$PATH"
+[ -d "$HOME/bin" ] && export PATH="$HOME/bin:$PATH"
+[ -d "$HOME/.symfony" ] && export PATH="$HOME/.symfony/bin:$PATH"
+
+[ -s "$HOME/.zsh_os" ]      && source $HOME/.zsh_os
+
+export GPG_TTY=$(tty)
+export PINENTRY_USER_DATA=USE_TTY=1
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
