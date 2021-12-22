@@ -1,7 +1,7 @@
 # vim: set ft=zsh:
 
 alias ls='ls -Gh'
-alias ll='ls -Glah'
+alias ll='ls -GSlah'
 
 alias top-cpu="top -o cpu -s 5 -n 15"
 alias top-mem="top -o mem -s 10"
@@ -10,4 +10,4 @@ alias pstree-of="pstree -p "
 
 export ICLOUD_PATH="$HOME/Library/Mobile Documents/com~apple~CloudDocs/"
 
-[ -d "/usr/local/opt/php@7.3" ] && export PATH="/usr/local/opt/php@7.3/bin:/usr/local/opt/php@7.3/sbin:$PATH"
+[ -d "/usr/local/opt/php@8.0" ] && export PATH="/usr/local/opt/php@8.0/bin:/usr/local/opt/php@8.0/sbin:$PATH"
