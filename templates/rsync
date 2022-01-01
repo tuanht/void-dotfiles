@@ -1,0 +1,6 @@
+# vim: set ft=bash:
+#!/bin/bash
+
+# Modify 'source' and 'target' to your needs
+rsync --archive --verbose --ignore-existing --delete 'source' 'target'
+

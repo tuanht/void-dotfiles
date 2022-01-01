@@ -8,6 +8,8 @@ OS_TYPE="$(uname)"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+ZSH_CUSTOM="$HOME/.omzsh-custom"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -106,6 +108,7 @@ export LC_CTYPE=UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias zshsource="source ~/.zshrc"
 alias zshconfig="nvim ~/.zshrc"
 alias whatmyip="curl https://api.ipify.org"
 alias dir-usage="du -hs * | sort -hr"
@@ -129,3 +132,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -s "$HOME/.symfony/bin" ] && export PATH="$HOME/.symfony/bin:$PATH"
+
