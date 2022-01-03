@@ -2,5 +2,5 @@
 #!/bin/bash
 
 # Modify 'source' and 'target' to your needs
-rsync --archive --verbose --ignore-existing --delete 'source' 'target'
+rsync --archive --verbose --human-readable --partial --progress --ignore-existing --delete 'source' 'target'
 
