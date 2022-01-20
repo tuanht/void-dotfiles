@@ -133,3 +133,5 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -s "$HOME/.symfony/bin" ] && export PATH="$HOME/.symfony/bin:$PATH"
 
+[ -x "$(command -v starship)" ] && eval "$(starship init zsh)"
+
