@@ -113,6 +113,8 @@ alias zshconfig="nvim ~/.zshrc"
 alias whatmyip="curl https://api.ipify.org"
 alias dir-usage="du -hs * | sort -hr"
 alias y="yadm --yadm-repo $HOME/.local/share/yadm/repo.git "
+alias yp="yadm --yadm-repo $HOME/.local/share/yadm/repo-private.git "
+alias yg="git --git-dir=$HOME/.local/share/yadm/repo.git "
 alias n="npm "
 alias gp="git pull"
 alias gs="git status -s"
@@ -122,7 +124,8 @@ export PATH="/usr/local/sbin:$PATH"
 [ -d "$HOME/bin" ] && export PATH="$HOME/bin:$PATH"
 [ -d "$HOME/.symfony" ] && export PATH="$HOME/.symfony/bin:$PATH"
 
-[ -s "$HOME/.zsh_os" ]      && source $HOME/.zsh_os
+[ -s "$HOME/.zsh_os" ] && source $HOME/.zsh_os
+[ -s "$HOME/.zsh_rs" ] && source $HOME/.zsh_rs
 
 export GPG_TTY=$(tty)
 export PINENTRY_USER_DATA=USE_TTY=1
