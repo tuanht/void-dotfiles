@@ -1,9 +1,9 @@
 ; vim: set ft=gitconfig:
 
-[user]
-    name = Tuan Ha
-    email = tuanht@users.noreply.github.com
-    signingkey = 8812D125486B31E7
+[include]
+    path = ~/.gitconfig_user.inc
+[includeIf "gitdir:~/rs/"]
+    path = ~/.gitconfig_user_rs.inc
 [core]
     excludesfile = ~/.gitignore_global
     editor = vim
