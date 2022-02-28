@@ -16,6 +16,10 @@ ZSH_CUSTOM="$HOME/.omzsh-custom"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="candy"
 
+# Set dark & light iTerm profile names for custom plugin iterm-auto-dark
+ITERM_DARK_PROFILE="Symfonic"
+ITERM_LIGHT_PROFILE="Night Owlish Light"
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -76,7 +80,7 @@ ZSH_THEME="candy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git iterm-auto-dark)
 
 source $ZSH/oh-my-zsh.sh
 
