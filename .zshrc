@@ -125,7 +125,7 @@ alias gs="git status -s"
 alias gc="git commit -S"
 
 export PATH="/usr/local/sbin:$PATH"
-[ -d "$HOME/bin" ] && export PATH="$HOME/bin:$PATH"
+[ -d "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
 [ -d "$HOME/.symfony" ] && export PATH="$HOME/.symfony/bin:$PATH"
 
 [ -s "$HOME/.zsh_os" ] && source $HOME/.zsh_os
