@@ -9,8 +9,9 @@ Install `git`, `git-lfs`, `curl`, `neovim`, `tmux` and `zsh` (non-macOS only)
 ### macOS
 
 ```shell
+xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install git git-lfs curl neovim tmux starship
+brew install git git-lfs curl neovim tmux yadm
 ```
 
 ### Ubuntu-based Linux
