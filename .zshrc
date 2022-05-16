@@ -124,6 +124,7 @@ alias g="git"
 alias gp="git pull"
 alias gs="git status -s"
 alias gc="git commit -S"
+alias lintlastcommit="commitlint --from=HEAD~1"
 
 export PATH="/usr/local/sbin:$PATH"
 [ -d "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
@@ -138,6 +139,8 @@ export PINENTRY_USER_DATA=USE_TTY=1
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -s "/opt/homebrew/etc/profile.d/z.s" ] && . /opt/homebrew/etc/profile.d/z.sh
 
 [ -s "$HOME/.symfony/bin" ] && export PATH="$HOME/.symfony/bin:$PATH"
 
