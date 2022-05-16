@@ -9,10 +9,12 @@
 - 🍺 [`ncdu`](https://dev.yorhel.nl/ncdu): disk usage analyzer.
 - 🍺 [`tldr`](https://tldr.sh/): Simplified and community-driven man pages.
 - 🍏 [`mas`](https://github.com/mas-cli/mas): CLI interface for App Store.
+- ⚙️  [`fclones`](https://github.com/pkolaczk/fclones): Efficient duplicate file finder and remover written in Rust.
 
-## Legends
+## Legend
 
 - 🍺 : Installable from Homebrew.
 - 🐧 : Linux-only.
 - 🍏 : Apple UNIX only.
 - 💻 : Useful for work.
+- ⚙️  : Rust.
