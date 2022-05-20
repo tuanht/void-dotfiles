@@ -2,6 +2,10 @@
 
 [include]
     path = ~/.gitconfig_user.inc
+[includeIf "gitdir:~/notes-git/"]
+    path = ~/.gitconfig_nas.inc
+[includeIf "gitdir:~/pictures-git/"]
+    path = ~/.gitconfig_nas.inc
 [includeIf "gitdir:~/rs/"]
     path = ~/.gitconfig_user_rs.inc
 [core]
