@@ -113,7 +113,7 @@ export LC_CTYPE=UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias zshsource="source ~/.zshrc"
-alias zshconfig="nvim ~/.zshrc"
+alias zshconfig="vim ~/.zshrc"
 alias whatmyip="curl https://api.ipify.org"
 alias dir-usage="du -hs * | sort -hr"
 alias y="yadm --yadm-repo $HOME/.local/share/yadm/repo.git "
@@ -123,7 +123,9 @@ alias n="npm "
 alias g="git"
 alias gp="git pull"
 alias gs="git status -s"
+alias gsd="git diff --staged"
 alias gc="git commit -S"
+alias commitlint-gen="echo \"module.exports = {extends: ['@commitlint/config-conventional']}\" > commitlint.config.js"
 alias lintlastcommit="commitlint --from=HEAD~1"
 
 export PATH="/usr/local/sbin:$PATH"
