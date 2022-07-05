@@ -2,7 +2,8 @@
 
 OS_TYPE="$(uname)"
 YADM_PREFIX="$HOME/.local/share/yadm/repo.git"
-NOTE_PREFIX="$HOME/notes"
+NOTE_PREFIX="$HOME/notes-git"
+PICTURE_PREFIX="$HOME/pictures-git"
 NOW=$(date +%s)
 RANGE=$(expr 60 \* 60 \* 24)
 
@@ -39,3 +40,10 @@ if [ "$diff" -gt "$RANGE" ]; then
     git -C $NOTE_PREFIX pull --ff-only
 fi
 
+last_pulled=$(date_modify $PICTURE_PREFIX/.git/FETCH_HEAD)
+diff=$(expr $NOW - $last_pulled)
+
+if [ "$diff" -gt "$RANGE" ]; then
+    echo 'Updating pictures...'
+    git -C $NOTE_PREFIX pull --ff-only
+fi
