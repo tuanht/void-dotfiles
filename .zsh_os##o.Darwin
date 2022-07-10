@@ -8,6 +8,8 @@ alias top-mem="top -o mem -s 10"
 
 alias pstree-of="pstree -p "
 
+alias mount.nfs="mount -t nfs -o resvport "
+
 export ICLOUD_PATH="$HOME/Library/Mobile Documents/com~apple~CloudDocs/"
 
 [ -d "/usr/local/opt/php@8.0" ] && export PATH="/usr/local/opt/php@8.0/bin:/usr/local/opt/php@8.0/sbin:$PATH"
