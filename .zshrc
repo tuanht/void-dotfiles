@@ -112,6 +112,7 @@ export LC_CTYPE=UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias sudo="sudo "
 alias zshsource="source ~/.zshrc"
 alias zshconfig="vim ~/.zshrc"
 alias whatmyip="curl https://api.ipify.org"
