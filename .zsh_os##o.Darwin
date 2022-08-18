@@ -12,4 +12,7 @@ alias mount.nfs="mount -t nfs -o resvport "
 
 export ICLOUD_PATH="$HOME/Library/Mobile Documents/com~apple~CloudDocs/"
 
-[ -d "/usr/local/opt/php@8.0" ] && export PATH="/usr/local/opt/php@8.0/bin:/usr/local/opt/php@8.0/sbin:$PATH"
+[ -d "/usr/local/opt/php@8.0" ] && export PATH="$PATH:/usr/local/opt/php@8.0/bin:/usr/local/opt/php@8.0/sbin"
+[ -d "/opt/homebrew/opt/php@8.1" ] && export PATH="$PATH:/opt/homebrew/opt/php@8.1/bin"
+[ -d "/opt/homebrew/Cellar/mysql-client/8.0.30" ] && export PATH="$PATH:/opt/homebrew/Cellar/mysql-client/8.0.30/bin"
+
