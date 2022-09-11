@@ -19,5 +19,5 @@ alias kvc-start="sudo systemctl start kerio-kvc.service"
 alias kvc-stop="sudo systemctl stop kerio-kvc.service"
 
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-    source /etc/profile.d/vte-2.91.sh
+    [ -s "/etc/profile.d/vte-2.91.sh" ] && source /etc/profile.d/vte-2.91.sh
 fi
