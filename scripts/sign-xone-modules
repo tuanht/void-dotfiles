@@ -36,3 +36,6 @@ find $MODULE_DIR -name "*.ko" -type f -exec /usr/src/kernels/$(uname -r)/scripts
 # Re-compress them
 find $MODULE_DIR -name "*.ko" -type f -exec xz "{}" \;
 
+# Load all modules
+find $MODULE_DIR -name "*.ko.xz" -type f -exec insmod "{}" \;
+
