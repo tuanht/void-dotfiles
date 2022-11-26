@@ -13,7 +13,7 @@ On macOS, `svn` is required to install some fonts with Homebrew.
 ```shell
 xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install git curl neovim tmux yadm
+brew install git curl neovim tmux yadm gpg
 ```
 
 ### Ubuntu-based Linux
