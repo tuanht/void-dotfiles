@@ -1,0 +1,36 @@
+# vim: set ft=bash:
+#!/bin/bash
+#
+# IMPORTANCE NOTE
+# This script is not intended to act as a fully 2-ways synchronize file system or git-like alternative.
+# There is an issue with symlink to another shared folder on Synology NAS.
+
+PORT=22
+USER=$(whoami)
+
+. ./.env
+
+base="/volume1/homes/${USER}"
+
+if [ -z $REMOTE ]; then
+    echo "Rsync Remote is not configured"
+    exit 1
+fi
+
+if [ ! -z $BASE_DIR ]; then
+    base=$BASE_DIR
+fi
+
+bpwd=$(basename $PWD)
+
+# Trim all text after @
+# see https://stackoverflow.com/questions/4168371/how-can-i-remove-all-text-after-a-character-in-bash#4170409
+dir=${bpwd%%@*}
+
+rsync --archive --verbose --human-readable --partial --progress --update \
+    --no-g \
+    --exclude={'.env**','.deleted/**','@eaDir'} \
+    -e "ssh -p ${PORT}" \
+    ${1:-} \
+    "${USER}@${REMOTE}:${base}/${dir}/" ./
+

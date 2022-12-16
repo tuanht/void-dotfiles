@@ -17,7 +17,7 @@ source ~/.config/nvim/map.vim
 " endif
 
 """"" enable theme
-colorscheme night-owl
+" colorscheme night-owl
 
 set number
 

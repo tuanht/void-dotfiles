@@ -1,0 +1,30 @@
+# vim: set ft=bash:
+#!/bin/bash
+
+PORT=22
+USER=$(whoami)
+
+. ./.env
+
+base="/volume1/homes/${USER}"
+
+if [ -z $REMOTE ]; then
+    echo "Rsync Remote is not configured"
+    exit 1
+fi
+
+if [ ! -z $BASE_DIR ]; then
+    base=$BASE_DIR
+fi
+
+bpwd=$(basename $PWD)
+dir=${bpwd%%@*}
+
+rsync --archive --verbose --human-readable --partial --progress --delete \
+    --no-g \
+    -b --backup-dir=".deleted" \
+    --exclude={'.env**','.deleted/**'} \
+    -e "ssh -p ${PORT}" ${1:-} \
+    ./ \
+    "${USER}@${REMOTE}:${base}/${dir}/"
+
