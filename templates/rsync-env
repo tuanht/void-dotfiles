@@ -1,0 +1,3 @@
+# vim: set ft=env:
+REMOTE=<rsync host>
+PORT=<insert your custom port here or remove this line>
