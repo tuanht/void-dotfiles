@@ -23,7 +23,7 @@ dir=${bpwd%%@*}
 rsync --archive --verbose --human-readable --partial --progress --delete \
     --no-g \
     -b --backup-dir=".deleted" \
-    --exclude={'.env**','.deleted/**'} \
+    --exclude={'.env**','.deleted/**','.git/**','.DS_Store'} \
     -e "ssh -p ${PORT}" ${1:-} \
     ./ \
     "${USER}@${REMOTE}:${base}/${dir}/"

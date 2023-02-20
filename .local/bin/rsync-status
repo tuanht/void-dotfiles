@@ -23,7 +23,7 @@ dir=${bpwd%%@*}
 # See "rsync compare directories?"
 # https://unix.stackexchange.com/a/351112
 rsync -rvnc --delete \
-    --exclude={'.env**','.deleted/**','@eaDir'} \
+    --exclude={'.env**','.deleted/**','@eaDir','.git/**','.DS_Store'} \
     -e "ssh -p ${PORT}" \
     ./ \
     "${USER}@${REMOTE}:${base}/${dir}"

@@ -13,6 +13,8 @@ alias bss='btrfs subvolume snapshot -r / /mnt/backup/rootfs-`date +%Y%m%d`'
 alias bsl='btrfs subvolume list /'
 alias bsd='btrfs subvolume delete '
 
+alias dcf='docker compose -f '
+
 # for systemd-based distro
 alias kvc-status="sudo systemctl status kerio-kvc.service"
 alias kvc-start="sudo systemctl start kerio-kvc.service"
