@@ -15,6 +15,9 @@ alias bsd='btrfs subvolume delete '
 
 alias dcf='docker compose -f '
 
+alias wtemp='watch -n2 sensors'
+alias wfreq='watch -n2 "grep \"^[c]pu MHz\" /proc/cpuinfo'
+
 # for systemd-based distro
 alias kvc-status="sudo systemctl status kerio-kvc.service"
 alias kvc-start="sudo systemctl start kerio-kvc.service"
