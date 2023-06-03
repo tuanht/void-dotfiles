@@ -26,3 +26,7 @@ alias kvc-stop="sudo systemctl stop kerio-kvc.service"
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
     [ -s "/etc/profile.d/vte-2.91.sh" ] && source /etc/profile.d/vte-2.91.sh
 fi
+
+TOOLBOX_PROMPT=$(toolbox_prompt_info)
+[ -n "$TOOLBOX_PROMPT" ] && export PROMPT="$TOOLBOX_PROMPT $PROMPT"
+

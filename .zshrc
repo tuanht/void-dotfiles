@@ -80,7 +80,7 @@ ITERM_LIGHT_PROFILE="Night Owlish Light"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(iterm-auto-dark)
+plugins=(iterm-auto-dark toolbox)
 
 source $ZSH/oh-my-zsh.sh
 
