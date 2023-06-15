@@ -24,8 +24,8 @@ fi
 ln -s ~/.vim_runtime/vimrcs/basic.vim ~/.config/nvim/basic.vim
 
 # Install composer
-curl --create-dirs https://getcomposer.org/download/2.2.0/composer.phar -o ~/bin/composer
-chmod 744 bin/composer
+curl --create-dirs https://getcomposer.org/download/2.2.0/composer.phar -o ~/.local/bin/composer
+chmod 744 ~/.local/bin/composer
 
 # Install Symfony CLI
 curl -sS https://get.symfony.com/cli/installer | bash

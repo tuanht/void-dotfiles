@@ -1,5 +1,11 @@
 # vim: set ft=zsh:
 
+# Set dark & light iTerm profile names for custom plugin iterm-auto-dark
+ITERM_DARK_PROFILE="Symfonic"
+ITERM_LIGHT_PROFILE="Night Owlish Light"
+
+plugins=(iterm-auto-dark)
+
 alias ls='ls -Gh'
 alias ll='ls -GSlah'
 
@@ -10,9 +16,12 @@ alias pstree-of="pstree -p "
 
 alias mount.nfs="mount -t nfs -o resvport "
 
+alias update-work-dns-linked-ip="curl https://link-ip.nextdns.io/695357/f6da2df83c9fdaf4"
+
 export ICLOUD_PATH="$HOME/Library/Mobile Documents/com~apple~CloudDocs/"
 
 [ -d "/usr/local/opt/php@8.0" ] && export PATH="$PATH:/usr/local/opt/php@8.0/bin:/usr/local/opt/php@8.0/sbin"
-[ -d "/opt/homebrew/opt/php@8.1" ] && export PATH="$PATH:/opt/homebrew/opt/php@8.1/bin"
+[ -d "/opt/homebrew/opt/php@8.1" ] && export PATH="$PATH:/opt/homebrew/opt/php@8.1/bin:/opt/homebrew/opt/php@8.1/sbin"
 [ -d "/opt/homebrew/Cellar/mysql-client/8.0.30" ] && export PATH="$PATH:/opt/homebrew/Cellar/mysql-client/8.0.30/bin"
 
+ulimit -n 10000
