@@ -1,7 +1,5 @@
 # vim: set ft=zsh:
 
-plugins=(toolbox)
-
 alias ls='ls --color=auto -h'
 alias ll='ls --color=auto -lah'
 

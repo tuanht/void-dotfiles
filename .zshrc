@@ -77,6 +77,14 @@ ZSH_THEME="candy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(iterm-auto-dark toolbox)
+case $OS_TYPE in
+    "Linux")
+        plugins=(toolbox)
+        ;;
+    *)
+        plugins=(iterm-auto-dark)
+        ;;
+esac
 
 source $ZSH/oh-my-zsh.sh
 

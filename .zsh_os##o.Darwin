@@ -4,8 +4,6 @@
 ITERM_DARK_PROFILE="Symfonic"
 ITERM_LIGHT_PROFILE="Night Owlish Light"
 
-plugins=(iterm-auto-dark)
-
 alias ls='ls -Gh'
 alias ll='ls -GSlah'
 
