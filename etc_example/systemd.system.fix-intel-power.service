@@ -1,0 +1,8 @@
+[Unit]
+Description=Fix Intel CPU power permission
+
+[Service]
+ExecStart=/usr/local/sbin/fix-intel-power.sh
+
+[Install]
+WantedBy=default.target
