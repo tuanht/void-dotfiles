@@ -31,6 +31,7 @@
     p = pull
     s = status -s
     i = add -i
+    ps = push
     unstage = restore --staged
     c = commit -S
     undo-commit = reset --soft HEAD^
@@ -47,6 +48,7 @@
     clean-dry-run = clean -d -n
     clean-force = clean -d -f
     current-branch = branch --show-current
+    ; cleanup-branches = !git branch | grep -v "\*" | awk "{ print $1 }" | xargs git branch -d
     stash-unstage = !sh -c 'git stash save --keep-index "Unstage on $(git branch --show-current)"'
     stash-stage = !sh -c 'git stash save "Staged on $(git branch --show-current)"'
 
